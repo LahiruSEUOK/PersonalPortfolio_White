@@ -17,11 +17,11 @@ export const Hero = () => {
         </h1>
 
         <p className="text-lg sm:text-xl text-gray-600 mb-2">
-          Strategic Business Consultant & Solution Architect
+          Project Manager | Business Analyst | Solution Designer
         </p>
 
         <p className="text-base sm:text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-          I help businesses transform their strategy into execution with innovative solutions. Specialized in project management, business analysis, and custom software development.
+          I transform ideas into strategic, results-driven solutions by combining business insight, technical expertise, and structured project delivery to create measurable impact.
         </p>
 
         <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg">
