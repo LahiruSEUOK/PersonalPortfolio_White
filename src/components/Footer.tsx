@@ -1,4 +1,5 @@
 import { Mail, Phone, MessageCircle, Linkedin, Facebook, Briefcase } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -32,22 +33,21 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                'Home',
-                'About Me',
-                'Services',
-                'My Process',
-                'Projects',
-                'Blog',
-                'Contact',
-                'Privacy Policy',
-                'Terms of Service',
+                { name: 'Home', path: '/' },
+                { name: 'About Me', path: '/about' },
+                { name: 'Services', path: '/#services' },
+                { name: 'Projects', path: '/#projects' },
+                { name: 'Blog', path: '/#blog' },
+                { name: 'Contact', path: '/#contact' },
               ].map((item, index) => (
                 <li key={index}>
-                  <a href="#" className="hover:text-blue-600 transition-colors">
-                    {item}
-                  </a>
+                  <Link to={item.path} className="hover:text-blue-600 transition-colors">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
+              <li><Link to="#" className="hover:text-blue-600 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="#" className="hover:text-blue-600 transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
 
@@ -65,9 +65,9 @@ export const Footer = () => {
                 'Custom Software Development',
               ].map((item, index) => (
                 <li key={index}>
-                  <a href="#" className="hover:text-blue-600 transition-colors">
+                  <Link to="/#services" className="hover:text-blue-600 transition-colors">
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

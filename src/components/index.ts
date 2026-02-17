@@ -1,4 +1,5 @@
 export { Button } from './Button';
+export * from './MainLayout';
 export { Layout } from './Layout';
 export { Navbar } from './Navbar';
 export { Hero } from './Hero';

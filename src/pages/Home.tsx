@@ -1,6 +1,4 @@
 import {
-  Layout,
-  Navbar,
   Hero,
   Stats,
   About,
@@ -8,13 +6,12 @@ import {
   Projects,
   Benefits,
   CTA,
-  Footer,
 } from '../components';
+import { MainLayout } from '../components/MainLayout';
 
 export const Home = () => {
   return (
-    <Layout>
-      <Navbar />
+    <MainLayout>
       <Hero />
       <Stats />
       <About />
@@ -22,7 +19,6 @@ export const Home = () => {
       <Projects />
       <Benefits />
       <CTA />
-      <Footer />
-    </Layout>
+    </MainLayout>
   );
 };
