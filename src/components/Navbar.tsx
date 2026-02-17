@@ -10,7 +10,7 @@ export const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Process', path: '/process' },
-    { name: 'Projects', path: '/#projects' },
+    { name: 'Projects', path: '/projects' },
     { name: 'Blog', path: '/#blog' },
     { name: 'Contact', path: '/#contact' },
   ];
