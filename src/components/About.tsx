@@ -8,10 +8,15 @@ export const About = () => {
               Bridging Strategy and Execution
             </h2>
             <p className="text-gray-600 text-base sm:text-lg mb-4">
-              With over 3 years of experience in business strategy and digital transformation, I help organizations navigate complex challenges and unlock new opportunities.
+              With over 7 years of professional experience, including 3+ years
+              dedicated to project management, and a B.Sc. in Software
+              Engineering combined with an MBA in Project Management, I
+              bridge the gap between business vision and technical execution.
             </p>
             <p className="text-gray-600 text-base sm:text-lg mb-6">
-              My expertise spans project management, business analysis, solution architecture, and custom software development. I believe in creating sustainable solutions that drive real business value.
+              I specialize in leading enterprise software initiatives, architecting
+              scalable systems, and guiding cross-functional teams to deliver
+              structured, measurable results.
             </p>
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start gap-3">
