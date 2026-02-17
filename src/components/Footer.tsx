@@ -129,7 +129,7 @@ export const Footer = () => {
         {/* Bottom Divider */}
         <div className="border-t border-gray-300 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {currentYear} Lahir Sandeepa. All rights reserved.</p>
-          <p>Designed with simplicity.</p>
+          {/* <p>Designed with simplicity.</p> */}
         </div>
 
       </div>
