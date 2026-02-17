@@ -8,7 +8,7 @@ export const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/#services' },
+    { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/#projects' },
     { name: 'Blog', path: '/#blog' },
     { name: 'Contact', path: '/#contact' },
@@ -22,7 +22,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 relative">
 
           <Link to="/" className="text-xl font-bold text-gray-900">
-            Lahiru
+            
           </Link>
 
           {/* Centered Desktop Nav */}

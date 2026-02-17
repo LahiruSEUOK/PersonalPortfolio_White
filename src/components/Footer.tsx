@@ -35,7 +35,7 @@ export const Footer = () => {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'About Me', path: '/about' },
-                { name: 'Services', path: '/#services' },
+                { name: 'Services', path: '/services' },
                 { name: 'Projects', path: '/#projects' },
                 { name: 'Blog', path: '/#blog' },
                 { name: 'Contact', path: '/#contact' },
@@ -65,7 +65,7 @@ export const Footer = () => {
                 'Custom Software Development',
               ].map((item, index) => (
                 <li key={index}>
-                  <Link to="/#services" className="hover:text-blue-600 transition-colors">
+                  <Link to="/services" className="hover:text-blue-600 transition-colors">
                     {item}
                   </Link>
                 </li>
