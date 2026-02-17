@@ -39,7 +39,7 @@ export const Footer = () => {
                 { name: 'Process', path: '/process' },
                 { name: 'Projects', path: '/projects' },
                 { name: 'Blog', path: '/#blog' },
-                { name: 'Contact', path: '/#contact' },
+                { name: 'Contact', path: '/contact' },
               ].map((item, index) => (
                 <li key={index}>
                   <Link to={item.path} className="hover:text-blue-600 transition-colors">

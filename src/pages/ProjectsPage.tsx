@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MainLayout } from '../components/MainLayout';
 import { ArrowRight } from 'lucide-react';
 
@@ -5,25 +6,27 @@ import { ArrowRight } from 'lucide-react';
 import flowSuiteImg from '../assets/flowSuite.svg';
 import saasPayrollImg from '../assets/SaaSPayroll.svg';
 import cenziosLMSImg from '../assets/cenziosLMS.svg';
+import healthStationImg from '../assets/HealthStation24.svg';
+import learnerByCenziosImg from '../assets/learnerbyCenzios.svg';
 
-const ProjectCard = ({ title, subtitle, image, industries, platform, techStack, challenge, solution, results }: any) => (
+const ProjectCard = ({ title, subtitle, image, industries, platform, techStack, challenge, solution, results, isMobile }: any) => (
     <div className="bg-[#F8F9FA] rounded-[48px] p-8 lg:p-20 mb-20 shadow-sm border border-gray-50 overflow-hidden">
-        <div className="max-w-4xl mx-auto space-y-16">
-            <div className="text-center space-y-4">
+        <div className="max-w-4xl mx-auto space-y-16 text-center">
+            <div className="space-y-4">
                 <h3 className="text-4xl font-bold text-gray-900">{title}</h3>
                 <p className="text-lg text-gray-500 font-medium">{subtitle}</p>
             </div>
 
-            <div className="relative group">
-                <div className="absolute inset-0 bg-blue-600/5 blur-3xl rounded-full scale-150 group-hover:bg-blue-600/10 transition-colors" />
+            <div className={`relative group ${isMobile ? 'flex justify-center' : ''}`}>
+                {!isMobile && <div className="absolute inset-0 bg-blue-600/5 blur-3xl rounded-full scale-150 group-hover:bg-blue-600/10 transition-colors" />}
                 <img
                     src={image}
                     alt={title}
-                    className="relative w-full h-auto drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+                    className={`relative h-auto drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500 ${isMobile ? 'max-w-[280px] md:max-w-[320px]' : 'w-full'}`}
                 />
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200 text-left">
                 <div className="space-y-2">
                     <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Industries</h4>
                     <p className="text-gray-900 font-bold">{industries}</p>
@@ -38,7 +41,7 @@ const ProjectCard = ({ title, subtitle, image, industries, platform, techStack, 
                 </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-16">
+            <div className="grid md:grid-cols-2 gap-16 text-left">
                 <div className="space-y-6">
                     <div className="space-y-2">
                         <h4 className="text-sm font-bold text-blue-600 uppercase">The Challenge</h4>
@@ -50,7 +53,7 @@ const ProjectCard = ({ title, subtitle, image, industries, platform, techStack, 
                     </div>
                 </div>
                 <div className="space-y-8 bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
-                    <h4 className="text-sm font-bold text-gray-400 uppercase">The Results</h4>
+                    <h4 className="text-sm font-bold text-gray-400 uppercase">{isMobile ? 'The Impact' : 'The Result'}</h4>
                     <div className="grid grid-cols-2 gap-8">
                         {results.map((res: any, i: number) => (
                             <div key={i} className="space-y-1">
@@ -66,7 +69,9 @@ const ProjectCard = ({ title, subtitle, image, industries, platform, techStack, 
 );
 
 export const ProjectsPage = () => {
-    const projects = [
+    const [activeTab, setActiveTab] = useState('web');
+
+    const webProjects = [
         {
             title: 'FlowSuite',
             subtitle: 'Workflow Automation & Asset Management',
@@ -116,6 +121,44 @@ export const ProjectsPage = () => {
         }
     ];
 
+    const mobileProjects = [
+        {
+            title: 'HealthStation24',
+            subtitle: 'Real-Time Health Monitoring System',
+            image: healthStationImg,
+            industries: 'HealthTech, IoT',
+            platform: 'iOS & Android App',
+            techStack: 'React Native, Node.js, Firebase',
+            challenge: 'Patients needing continuous monitoring struggled with expensive, complex systems that lacked real-time alerting for caregivers.',
+            solution: 'Developed a user-friendly mobile application that connects to IoT health monitors, providing real-time vital tracking and instant emergency alerts.',
+            results: [
+                { value: '60%', label: 'Response Time' },
+                { value: '95%', label: 'Patient Trust' },
+                { value: '0', label: 'Critical Delays' },
+                { value: '100%', label: 'Uptime' }
+            ],
+            isMobile: true
+        },
+        {
+            title: 'learner by Cenzios',
+            subtitle: 'Integrated Learning Management System Mobile',
+            image: learnerByCenziosImg,
+            industries: 'EdTech',
+            platform: 'Custom Mobile App',
+            techStack: 'Flutter, Firebase',
+            challenge: 'Students often found it difficult to track course progress and access materials on-the-go with purely web-based systems.',
+            solution: 'Built a lightweight mobile companion with offline support, real-time push notifications for assignments, and in-app interactive quizzes.',
+            results: [
+                { value: '80%', label: 'Retention Increase' },
+                { value: '75%', label: 'Faster Completion' },
+                { value: 'Data', label: 'Offline Access' }
+            ],
+            isMobile: true
+        }
+    ];
+
+    const filteredProjects = activeTab === 'web' ? webProjects : mobileProjects;
+
     return (
         <MainLayout>
             <div className="pt-32 pb-20">
@@ -128,15 +171,27 @@ export const ProjectsPage = () => {
                         A portfolio of high-impact technical solutions that solve real-world business challenges through strategic engineering.
                     </p>
                     <div className="flex justify-center gap-4 mt-12">
-                        <button className="px-6 py-2 bg-blue-600 text-white rounded-full font-bold text-sm">Web Applications</button>
-                        <button className="px-6 py-2 bg-white text-gray-600 border border-gray-200 rounded-full font-bold text-sm">Mobile Applications</button>
-                        <button className="px-6 py-2 bg-white text-gray-600 border border-gray-200 rounded-full font-bold text-sm">SaaS</button>
+                        <button
+                            onClick={() => setActiveTab('web')}
+                            className={`px-6 py-2 rounded-full font-bold text-sm transition-all ${activeTab === 'web' ? 'bg-blue-600 text-white shadow-lg' : 'bg-white text-gray-600 border border-gray-200 hover:border-blue-200'}`}
+                        >
+                            Web Applications
+                        </button>
+                        <button
+                            onClick={() => setActiveTab('mobile')}
+                            className={`px-6 py-2 rounded-full font-bold text-sm transition-all ${activeTab === 'mobile' ? 'bg-blue-600 text-white shadow-lg' : 'bg-white text-gray-600 border border-gray-200 hover:border-blue-200'}`}
+                        >
+                            Mobile Applications
+                        </button>
+                        <button className="px-6 py-2 bg-white text-gray-600 border border-gray-200 rounded-full font-bold text-sm hover:border-blue-200">
+                            SaaS
+                        </button>
                     </div>
                 </section>
 
                 {/* Projects List */}
                 <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-                    {projects.map((project, i) => (
+                    {filteredProjects.map((project, i) => (
                         <ProjectCard key={i} {...project} />
                     ))}
                 </section>
