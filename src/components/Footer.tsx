@@ -36,6 +36,7 @@ export const Footer = () => {
                 { name: 'Home', path: '/' },
                 { name: 'About Me', path: '/about' },
                 { name: 'Services', path: '/services' },
+                { name: 'Process', path: '/process' },
                 { name: 'Projects', path: '/#projects' },
                 { name: 'Blog', path: '/#blog' },
                 { name: 'Contact', path: '/#contact' },
