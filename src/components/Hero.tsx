@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import profile from '../assets/profile.png';
 
 export const Hero = () => {
   return (
@@ -6,7 +7,7 @@ export const Hero = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <img
-            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+            src={profile}
             alt="Profile"
             className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg border-4 border-blue-600"
           />
