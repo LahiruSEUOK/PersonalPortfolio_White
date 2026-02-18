@@ -9,7 +9,7 @@ export const Hero = () => {
           <img
             src={profile}
             alt="Profile"
-            className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg border-4 border-blue-600"
+            className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg border-4 "
           />
         </div>
 
