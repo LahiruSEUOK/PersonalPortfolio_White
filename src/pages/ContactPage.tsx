@@ -54,7 +54,7 @@ export const ContactPage = () => {
         <MainLayout>
             <div className="pt-32 pb-20">
                 <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-                    <h1 className="text-5xl md:text-6xl font-bold text-gray-900 text-center mb-24 tracking-tight">
+                    <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 text-center mb-24 tracking-tight">
                         Let's Work Together
                     </h1>
 
@@ -89,9 +89,9 @@ export const ContactPage = () => {
                         </div>
 
                         {/* Right Column - Form */}
-                        <div className="bg-[#F8F9FA] rounded-[48px] p-8 lg:p-12 shadow-sm border border-gray-50">
+                        <div className="bg-white rounded-[48px] p-8 lg:p-12 shadow-sm border border-gray-50">
                             <div className="space-y-8">
-                                <h3 className="text-2xl font-bold text-gray-900">Send Me a Message</h3>
+                                <h3 className="text-2xl font-semibold text-gray-900">Send Me a Message</h3>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <FormInput label="Full Name" placeholder="John Doe" />
                                     <FormInput label="Email Address" placeholder="john@example.com" type="email" />
@@ -124,7 +124,7 @@ export const ContactPage = () => {
                 {/* What Happens Next */}
                 <section className="py-32 bg-white px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl font-bold text-gray-900 text-center mb-20">What Happens Next?</h2>
+                        <h2 className="text-4xl font-semibold text-gray-900 text-center mb-20">What Happens Next?</h2>
                         <div className="space-y-12">
                             {[
                                 { step: '01', title: 'Step Beyond Your Inquiry', desc: 'Initial review of your message and project scope.' },
@@ -136,7 +136,7 @@ export const ContactPage = () => {
                                 <div key={i} className="flex gap-8 group">
                                     <span className="text-sm font-bold text-gray-300 pt-1 group-hover:text-blue-600 transition-colors">{item.step}</span>
                                     <div className="space-y-1">
-                                        <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
+                                        <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
                                         <p className="text-gray-500">{item.desc}</p>
                                     </div>
                                 </div>
@@ -146,9 +146,9 @@ export const ContactPage = () => {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="py-32 bg-[#F8F9FA] px-4 sm:px-6 lg:px-8">
+                <section className="py-32 bg-white px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto">
-                        <h2 className="text-4xl font-bold text-gray-900 text-center mb-20">Quick Answers</h2>
+                        <h2 className="text-4xl font-semibold text-gray-900 text-center mb-20">Quick Answers</h2>
                         <div className="bg-white rounded-[40px] p-8 lg:p-12 shadow-sm border border-gray-50 space-y-2">
                             {[
                                 { q: 'What is your typical project timeline?', a: 'Timelines vary by scope, but most custom software projects range from 3 to 6 months for initial delivery.' },
@@ -171,7 +171,7 @@ export const ContactPage = () => {
                 {/* Bottom CTA */}
                 <section className="py-32 px-4 sm:px-6 lg:px-8 text-center bg-white">
                     <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                        <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 leading-tight">
                             Looking Forward to Hearing From You.
                         </h2>
                         <p className="text-xl text-gray-500 max-w-2xl mx-auto">

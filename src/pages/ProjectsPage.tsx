@@ -10,10 +10,10 @@ import healthStationImg from '../assets/HealthStation24.svg';
 import learnerByCenziosImg from '../assets/learnerbyCenzios.svg';
 
 const ProjectCard = ({ title, subtitle, image, industries, platform, techStack, challenge, solution, results, isMobile }: any) => (
-    <div className="bg-[#F8F9FA] rounded-[48px] p-8 lg:p-20 mb-20 shadow-sm border border-gray-50 overflow-hidden">
+    <div className="bg-white rounded-[48px] p-8 lg:p-20 mb-20 shadow-sm border border-gray-50 overflow-hidden">
         <div className="max-w-4xl mx-auto space-y-16 text-center">
             <div className="space-y-4">
-                <h3 className="text-4xl font-bold text-gray-900">{title}</h3>
+                <h3 className="text-4xl font-semibold text-gray-900">{title}</h3>
                 <p className="text-lg text-gray-500 font-medium">{subtitle}</p>
             </div>
 
@@ -164,7 +164,7 @@ export const ProjectsPage = () => {
             <div className="pt-32 pb-20">
                 {/* Header Section */}
                 <section className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24">
-                    <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+                    <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 tracking-tight">
                         Transforming Complex Operations Into Scalable Digital Systems
                     </h1>
                     <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">
@@ -199,7 +199,7 @@ export const ProjectsPage = () => {
                 {/* CTA */}
                 <section className="py-32 px-4 sm:px-6 lg:px-8 text-center">
                     <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                        <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 leading-tight">
                             Ready to Start Your Project?
                         </h2>
                         <p className="text-xl text-gray-500 max-w-2xl mx-auto">

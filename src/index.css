@@ -19,7 +19,7 @@
 
   @font-face {
     font-family: 'SF Pro Display';
-    src: url('./assets/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+    src: url('./assets/fonts/SF-Pro-Display-Semibold.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
   }
@@ -29,5 +29,19 @@
     src: url('./assets/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
     font-weight: 700;
     font-style: normal;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+    background-color: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600 !important;
   }
 }

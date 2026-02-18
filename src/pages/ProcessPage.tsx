@@ -23,7 +23,7 @@ const ProcessStep = ({ number, title, description, subItems, buttonText }: any) 
             </span>
         </div>
         <div className="md:w-3/4 space-y-8">
-            <h3 className="text-3xl font-bold text-gray-900">{title}</h3>
+            <h3 className="text-3xl font-semibold text-gray-900">{title}</h3>
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
                 {description}
             </p>
@@ -113,7 +113,7 @@ export const ProcessPage = () => {
             <div className="pt-32 pb-20">
                 {/* Header */}
                 <section className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24">
-                    <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+                    <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 tracking-tight">
                         A Structured Yet Flexible Approach to Software Delivery
                     </h1>
                     <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">
@@ -129,15 +129,15 @@ export const ProcessPage = () => {
                 </section>
 
                 {/* Communication Section */}
-                <section className="py-24 bg-[#F8F9FA] px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Transparent & Structured Communication</h2>
+                        <h2 className="text-4xl font-semibold text-gray-900 text-center mb-16">Transparent & Structured Communication</h2>
                         <div className="grid md:grid-cols-2 gap-12">
                             <div className="bg-white p-10 rounded-[32px] shadow-sm space-y-6">
                                 <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
                                     <MessageSquare className="text-blue-600" size={24} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900">Weekly Progress Updates</h3>
+                                <h3 className="text-2xl font-semibold text-gray-900">Weekly Progress Updates</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     Regular check-ins to review progress, discuss challenges, and align on next steps. We maintain full visibility into every stage of development.
                                 </p>
@@ -146,7 +146,7 @@ export const ProcessPage = () => {
                                 <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
                                     <Zap className="text-blue-600" size={24} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900">Real-Time Sync</h3>
+                                <h3 className="text-2xl font-semibold text-gray-900">Real-Time Sync</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     Direct access to project boards and communication channels for instant feedback and rapid decision-making.
                                 </p>
@@ -158,7 +158,7 @@ export const ProcessPage = () => {
                 {/* Flexible by Design */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8 text-center">
                     <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-4xl font-bold text-gray-900">Flexible by Design</h2>
+                        <h2 className="text-4xl font-semibold text-gray-900">Flexible by Design</h2>
                         <p className="text-xl text-gray-500">Tailoring the process to fit your specific needs and team dynamics.</p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8">
                             {[
@@ -168,7 +168,7 @@ export const ProcessPage = () => {
                                 { icon: Handshake, label: 'Collaboration' }
                             ].map((item, i) => (
                                 <div key={i} className="space-y-4">
-                                    <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto">
+                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto">
                                         <item.icon className="text-blue-600" size={24} />
                                     </div>
                                     <span className="font-bold text-gray-900">{item.label}</span>
@@ -179,9 +179,9 @@ export const ProcessPage = () => {
                 </section>
 
                 {/* What You Can Expect */}
-                <section className="py-24 bg-[#F8F9FA] px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center space-y-12">
-                        <h2 className="text-4xl font-bold text-gray-900">What You Can Expect</h2>
+                        <h2 className="text-4xl font-semibold text-gray-900">What You Can Expect</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-left max-w-2xl mx-auto pt-8">
                             {[
                                 'Full transparency at every stage',
@@ -203,7 +203,7 @@ export const ProcessPage = () => {
                 {/* CTA */}
                 <section className="py-32 px-4 sm:px-6 lg:px-8 text-center">
                     <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                        <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 leading-tight">
                             Ready to Start Your Project?
                         </h2>
                         <p className="text-xl text-gray-500 max-w-2xl mx-auto">

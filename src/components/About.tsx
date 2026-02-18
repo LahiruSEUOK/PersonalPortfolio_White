@@ -2,11 +2,11 @@ import about from '../assets/BridgingStrategy.svg';
 
 export const About = () => {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">
               Bridging Strategy and Execution
             </h2>
             <p className="text-gray-600 text-base sm:text-lg mb-4">

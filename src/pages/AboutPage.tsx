@@ -25,7 +25,7 @@ export const AboutPage = () => {
             <div className="pt-32 pb-20">
                 {/* Header Section */}
                 <section className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24">
-                    <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+                    <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 tracking-tight">
                         Lahiru Sandeepa
                     </h1>
                     <p className="text-xl text-gray-500 font-medium mb-8">
@@ -39,9 +39,9 @@ export const AboutPage = () => {
                 </section>
 
                 {/* Who I Am Section */}
-                <section className="py-24 bg-[#F8F9FA] px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                        <h2 className="text-6xl font-bold text-gray-900">Who I Am</h2>
+                        <h2 className="text-6xl font-semibold text-gray-900">Who I Am</h2>
                         <div className="space-y-6">
                             <p className="text-lg text-gray-600 leading-relaxed">
                                 As a project manager and technical lead, I bridge the gap between business vision
@@ -60,7 +60,7 @@ export const AboutPage = () => {
                 <section className="py-24 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-4xl font-bold text-gray-900 mb-4">My Journey</h2>
+                            <h2 className="text-4xl font-semibold text-gray-900 mb-4">My Journey</h2>
                             <p className="text-gray-500">The milestones that shaped my professional path.</p>
                         </div>
 
@@ -84,7 +84,7 @@ export const AboutPage = () => {
                             ].map((item, i) => (
                                 <div key={i} className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                                     <div className="mb-6">{item.icon}</div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
                                     <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
@@ -95,7 +95,7 @@ export const AboutPage = () => {
                 {/* Quote Section */}
                 <section className="py-32 bg-white px-4 sm:px-6 lg:px-8 text-center border-y border-gray-50">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                        <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
                             Turning ambiguity into clarity.
                         </h2>
                         <p className="mt-8 text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
@@ -109,7 +109,7 @@ export const AboutPage = () => {
                 {/* My Approach Section */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-16">My Approach</h2>
+                        <h2 className="text-4xl font-semibold text-gray-900 mb-16">My Approach</h2>
                         <div className="grid md:grid-cols-3 gap-12">
                             {[
                                 {
@@ -130,7 +130,7 @@ export const AboutPage = () => {
                             ].map((item, i) => (
                                 <div key={i} className="space-y-4">
                                     <span className="text-sm font-bold text-blue-600 uppercase">{item.id}</span>
-                                    <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
                                     <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
@@ -139,10 +139,10 @@ export const AboutPage = () => {
                 </section>
 
                 {/* Expertise & Skills */}
-                <section className="py-24 bg-[#F8F9FA] px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
                         <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-12">Core Expertise</h2>
+                            <h2 className="text-4xl font-semibold text-gray-900 mb-12">Core Expertise</h2>
                             <div className="space-y-8">
                                 {[
                                     { title: 'Project Management', desc: 'Agile, Scrum, Waterfall methodologies.' },
@@ -150,14 +150,14 @@ export const AboutPage = () => {
                                     { title: 'Solution Architecture', desc: 'Designing scalable and robust software systems.' }
                                 ].map((item, i) => (
                                     <div key={i}>
-                                        <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
                                         <p className="text-gray-600">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-12">Technical Skills</h2>
+                            <h2 className="text-4xl font-semibold text-gray-900 mb-12">Technical Skills</h2>
                             <div className="space-y-8">
                                 {[
                                     { title: 'Full Stack Development', desc: 'React, Node.js, TypeScript, PostgreSQL.' },
@@ -165,7 +165,7 @@ export const AboutPage = () => {
                                     { title: 'Data Analytics', desc: 'Python, PowerBI, SQL, Tableau.' }
                                 ].map((item, i) => (
                                     <div key={i}>
-                                        <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
                                         <p className="text-gray-600">{item.desc}</p>
                                     </div>
                                 ))}
@@ -177,64 +177,64 @@ export const AboutPage = () => {
                 {/* Tools & Technologies */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8 text-center">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-16">
+                        <h2 className="text-4xl font-semibold text-gray-900 mb-16">
                             Tools & Technologies
                         </h2>
 
                         <div className="flex flex-wrap justify-center gap-6">
-  {[
-    { name: 'Jira', icon: <FaJira color="#2684FF" /> },
-    { name: 'Confluence', icon: <SiConfluence color="#172B4D" /> },
-    { name: 'Figma', icon: <FaFigma color="#F24E1E" /> },
-    { name: 'GitHub', icon: <FaGithub color="#181717" /> },
-    { name: 'VS Code', icon: <VscVscode color="#007ACC" /> },
-    { name: 'Docker', icon: <FaDocker color="#2496ED" /> },
-    { name: 'AWS', icon: <FaAws color="#FF9900" /> },
-    { name: 'Postman', icon: <SiPostman color="#FF6C37" /> },
-    { name: 'Tableau', icon: <SiTableau color="#E97627" /> },
-    { name: 'Slack', icon: <FaSlack color="#4A154B" /> },
-    { name: 'Trello', icon: <FaTrello color="#0052CC" /> },
-    { name: 'Notion', icon: <SiNotion color="#000000" /> },
-  ].map((tool) => (
-    <div
-      key={tool.name}
-      className="flex items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full shadow-sm text-gray-700 font-medium hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
-    >
-      <span className="text-lg">
-        {tool.icon}
-      </span>
-      <span>{tool.name}</span>
-    </div>
-  ))}
-</div>
+                            {[
+                                { name: 'Jira', icon: <FaJira color="#2684FF" /> },
+                                { name: 'Confluence', icon: <SiConfluence color="#172B4D" /> },
+                                { name: 'Figma', icon: <FaFigma color="#F24E1E" /> },
+                                { name: 'GitHub', icon: <FaGithub color="#181717" /> },
+                                { name: 'VS Code', icon: <VscVscode color="#007ACC" /> },
+                                { name: 'Docker', icon: <FaDocker color="#2496ED" /> },
+                                { name: 'AWS', icon: <FaAws color="#FF9900" /> },
+                                { name: 'Postman', icon: <SiPostman color="#FF6C37" /> },
+                                { name: 'Tableau', icon: <SiTableau color="#E97627" /> },
+                                { name: 'Slack', icon: <FaSlack color="#4A154B" /> },
+                                { name: 'Trello', icon: <FaTrello color="#0052CC" /> },
+                                { name: 'Notion', icon: <SiNotion color="#000000" /> },
+                            ].map((tool) => (
+                                <div
+                                    key={tool.name}
+                                    className="flex items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full shadow-sm text-gray-700 font-medium hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                                >
+                                    <span className="text-lg">
+                                        {tool.icon}
+                                    </span>
+                                    <span>{tool.name}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
 
                 {/* Education & Certifications */}
-                <section className="py-24 bg-[#F8F9FA] px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
                         <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-12">Education</h2>
+                            <h2 className="text-4xl font-semibold text-gray-900 mb-12">Education</h2>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-lg font-bold text-gray-900 mb-1">MBA in Project Management</h4>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-1">MBA in Project Management</h4>
                                     <p className="text-gray-500 mb-2">Cardiff Metropolitan University | 2021</p>
                                 </div>
                                 <div>
-                                    <h4 className="text-lg font-bold text-gray-900 mb-1">B.Sc. (Hons) in Software Engineering</h4>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-1">B.Sc. (Hons) in Software Engineering</h4>
                                     <p className="text-gray-500">Plymouth University | 2018</p>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-12">Certifications</h2>
+                            <h2 className="text-4xl font-semibold text-gray-900 mb-12">Certifications</h2>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-lg font-bold text-gray-900 mb-1">PMP® Certification</h4>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-1">PMP® Certification</h4>
                                     <p className="text-gray-500 mb-2">Project Management Institute</p>
                                 </div>
                                 <div>
-                                    <h4 className="text-lg font-bold text-gray-900 mb-1">AWS Solution Architect</h4>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-1">AWS Solution Architect</h4>
                                     <p className="text-gray-500">Amazon Web Services</p>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@ export const AboutPage = () => {
                 {/* Career Timeline */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">Career Timeline</h2>
+                        <h2 className="text-4xl font-semibold text-gray-900 mb-16 text-center">Career Timeline</h2>
                         <div className="relative border-l border-gray-200 ml-4 md:ml-0">
                             {[
                                 {
@@ -270,7 +270,7 @@ export const AboutPage = () => {
                                 <div key={i} className="mb-12 ml-8 relative">
                                     <span className="absolute -left-[41px] top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-sm" />
                                     <span className="text-sm font-bold text-blue-600 mb-1 block">{job.period}</span>
-                                    <h3 className="text-xl font-bold text-gray-900">{job.role}</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900">{job.role}</h3>
                                     <p className="text-gray-500 font-medium mb-4">{job.company}</p>
                                     <p className="text-gray-600 leading-relaxed">{job.desc}</p>
                                 </div>
@@ -282,7 +282,7 @@ export const AboutPage = () => {
                 {/* Beyond Work Section */}
                 <section className="py-24 bg-black text-white px-4 sm:px-6 lg:px-8 text-center">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl font-bold mb-8">Beyond Work</h2>
+                        <h2 className="text-4xl font-semibold mb-8">Beyond Work</h2>
                         <p className="text-xl text-gray-400 leading-relaxed mb-12">
                             When I'm not managing projects, I enjoy contributing to open-source software,
                             mentoring aspiring tech professionals, and exploring the latest trends in

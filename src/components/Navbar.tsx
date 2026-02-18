@@ -21,7 +21,7 @@ export const Navbar = () => {
         {/* Navbar Container */}
         <div className="flex items-center justify-between h-16 relative">
 
-          <Link to="/" className="text-xl font-bold text-gray-900">
+          <Link to="/" className="text-xl font-semibold text-gray-900">
 
           </Link>
 

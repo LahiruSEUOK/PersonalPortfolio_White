@@ -3,7 +3,7 @@ import profile from '../assets/profile.svg';
 
 export const Hero = () => {
   return (
-    <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white">
+    <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <img
@@ -13,9 +13,9 @@ export const Hero = () => {
           />
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#333333] mb-4">
-  Lahir Sandeepa
-</h1>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#333333] mb-4">
+          Lahir Sandeepa
+        </h1>
 
         <p className="text-lg sm:text-xl text-gray-600 mb-2">
           Project Manager | Business Analyst | Solution Designer

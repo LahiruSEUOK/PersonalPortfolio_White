@@ -38,7 +38,7 @@ export const Projects = () => {
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-24">
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-4xl font-semibold text-gray-900">
             Featured Projects
           </h2>
         </div>
@@ -46,7 +46,7 @@ export const Projects = () => {
         <div className="space-y-32">
           {projects.map((project, index) => (
             <div key={index} className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-              <div className="bg-[#F8F9FA] rounded-[32px] p-6 lg:p-12 aspect-[4/3] flex items-center justify-center shadow-sm">
+              <div className="bg-white rounded-[32px] p-6 lg:p-12 aspect-[4/3] flex items-center justify-center shadow-sm border border-gray-100">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -57,7 +57,7 @@ export const Projects = () => {
                 <span className="text-sm font-medium text-gray-400 uppercase tracking-widest">
                   {project.id}
                 </span>
-                <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
+                <h3 className="text-4xl lg:text-5xl font-semibold text-gray-900 tracking-tight">
                   {project.title}
                 </h3>
                 <p className="text-lg text-gray-500 leading-relaxed max-w-lg">
