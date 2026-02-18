@@ -6,16 +6,16 @@ export const About = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#333333] mb-6">
               Bridging Strategy and Execution
             </h2>
-            <p className="text-gray-600 text-base sm:text-lg mb-4">
+            <p className="text-[#9CA3AF] text-base sm:text-lg mb-4">
               With over 7 years of professional experience, including 3+ years
               dedicated to project management, and a B.Sc. in Software
               Engineering combined with an MBA in Project Management, I
               bridge the gap between business vision and technical execution.
             </p>
-            <p className="text-gray-600 text-base sm:text-lg mb-6">
+            <p className="text-[#9CA3AF] text-base sm:text-lg mb-6">
               I specialize in leading enterprise software initiatives, architecting
               scalable systems, and guiding cross-functional teams to deliver
               structured, measurable results.
