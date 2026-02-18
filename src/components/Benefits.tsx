@@ -5,17 +5,17 @@ export const Benefits = () => {
     {
       icon: Lightbulb,
       title: 'Strategic Thinking',
-      description: 'Data-driven approach to problem-solving and opportunity identification.',
+      description: 'Combining technical expertise with business strategy to design future-ready systems.',
     },
     {
       icon: CheckCircle,
       title: 'Proven Delivery',
-      description: 'Consistent track record of on-time and on-budget project delivery.',
+      description: 'Consistent track record of delivering complex projects on time and within scope.',
     },
     {
       icon: MessageSquare,
       title: 'Clear Communication',
-      description: 'Transparent and collaborative approach to stakeholder management.',
+      description: 'Transparent updates, proactive management, and aligned stakeholders throughout the lifecycle.',
     },
   ];
 

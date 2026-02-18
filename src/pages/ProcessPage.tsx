@@ -49,7 +49,7 @@ export const ProcessPage = () => {
         {
             number: '01',
             title: 'Discovery & Planning',
-            description: 'We begin by diving deep into your business requirements, goals, and technical landscape to build a rock-solid foundation for the project.',
+            description: 'We begin with deep discovery to understand your business objectives, stakeholders, constraints, and success criteria.',
             subItems: [
                 { label: 'Key Activities', value: 'Requirement gathering, Stakeholder interviews, Market research.' },
                 { label: 'Deliverables', value: 'Project roadmap, Detailed specification, Risk assessment.' }
@@ -117,7 +117,7 @@ export const ProcessPage = () => {
                         A Structured Yet Flexible Approach to Software Delivery
                     </h1>
                     <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">
-                        I combine rigorous engineering principles with agile flexibility to deliver high-impact software solutions.
+                        I follow a strategic, phased approach tailored to project complexity, team size, and organizational culture — balancing structure with adaptability to deliver measurable results.
                     </p>
                 </section>
 

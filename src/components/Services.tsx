@@ -10,17 +10,17 @@ export const Services = () => {
     {
       icon: BarChart3,
       title: 'Business Analysis',
-      description: 'Strategic insights and data-driven recommendations to optimize your business operations.',
+      description: 'Translating business needs into clear requirements and scalable technical solutions.',
     },
     {
       icon: Zap,
       title: 'Solution Design',
-      description: 'Custom solutions tailored to your unique business needs and technical requirements.',
+      description: 'Architecting comprehensive systems aligned with long-term business objectives.',
     },
     {
       icon: Code,
       title: 'Custom Software',
-      description: 'Scalable and maintainable software solutions built with modern technologies.',
+      description: 'Delivering web applications, SaaS platforms, and enterprise systems that solve real business problems.',
     },
   ];
 

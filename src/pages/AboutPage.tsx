@@ -32,9 +32,7 @@ export const AboutPage = () => {
                         Project Manager | Business Analyst | Solution Architect
                     </p>
                     <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                        Over 7+ years in the software industry, I specialize in transforming complex business
-                        requirements into elegant, scalable solutions. Passionate about professional growth,
-                        driving innovation and delivering high-impact business value.
+                        Based in Sri Lanka, I transform complex business challenges into elegant, scalable software solutions. With 7+ years of professional experience and 3+ years in project management, I’ve led cross-functional teams delivering enterprise systems, SaaS platforms, and custom web applications.
                     </p>
                 </section>
 
@@ -44,13 +42,10 @@ export const AboutPage = () => {
                         <h2 className="text-6xl font-semibold text-gray-900">Who I Am</h2>
                         <div className="space-y-6">
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                As a project manager and technical lead, I bridge the gap between business vision
-                                and technical implementation. My approach is centered on clear communication,
-                                strategic planning, and a deep understanding of the software development lifecycle.
+                                I bridge the gap between business strategy and technical execution.
                             </p>
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                I believe that successful projects are built on strong foundations of trust,
-                                collaboration, and a relentless focus on solving the right problems for the users.
+                                With a background in financial services and a B.Sc. (Hons) in Software Engineering from the University of Kelaniya, I combine business insight with strong technical understanding to design solutions that are practical, scalable, and impactful.
                             </p>
                         </div>
                     </div>
@@ -61,24 +56,24 @@ export const AboutPage = () => {
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-4xl font-semibold text-gray-900 mb-4">My Journey</h2>
-                            <p className="text-gray-500">The milestones that shaped my professional path.</p>
+                            <p className="text-gray-500">From financial planning to leading enterprise tech solutions.</p>
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-8">
                             {[
                                 {
                                     title: 'The Foundation',
-                                    desc: 'Started as a software engineer, gaining deep technical insights and a love for building products.',
+                                    desc: 'Began career as Executive Wealth Planner at AIA Insurance, mastering needs analysis and client-focused solution design. Later led IT modernization initiatives and operational strategy at Our Nation Pvt Ltd.',
                                     icon: <Target className="text-blue-600" size={24} />
                                 },
                                 {
                                     title: 'The Transition',
-                                    desc: 'Evolved into leadership roles, focusing on project management and business strategy.',
+                                    desc: 'Transitioned fully into project management and business analysis in software development. Focused on bridging the communication gap between stakeholders and engineering teams.',
                                     icon: <Rocket className="text-blue-600" size={24} />
                                 },
                                 {
                                     title: 'Current Impact',
-                                    desc: 'Now leading large-scale enterprise solutions and mentoring the next generation of talent.',
+                                    desc: 'Currently Project Manager & Business Analyst at Cenzios Pvt Ltd, leading multiple web and SaaS products while pursuing an MBA in Project Management from Cardiff Metropolitan University.',
                                     icon: <Award className="text-blue-600" size={24} />
                                 }
                             ].map((item, i) => (
@@ -99,9 +94,10 @@ export const AboutPage = () => {
                             Turning ambiguity into clarity.
                         </h2>
                         <p className="mt-8 text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                            I thrive on taking complex, undefined challenges and breaking them down into
-                            structured, executable plans that deliver real-world impact and drive
-                            sustainable business growth.
+                            I’m driven by the challenge of transforming complex, ambiguous business problems into clear, practical, and scalable solutions. I find deep satisfaction in bringing structure to uncertainty and turning ideas into systems that truly work.
+                        </p>
+                        <p className="mt-8 text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                            For me, success isn’t just about delivery, it’s about meaningful impact. Whether it’s streamlining operations, improving efficiency, accelerating workflows, or making daily work easier for end users, I’m motivated by solutions that create lasting value and measurable progress.
                         </p>
                     </div>
                 </section>
@@ -114,17 +110,17 @@ export const AboutPage = () => {
                             {[
                                 {
                                     title: 'Clear Communication',
-                                    desc: 'Ensuring all stakeholders are aligned and informed throughout the project lifecycle.',
+                                    desc: 'Keeping stakeholders aligned at every stage, ensuring transparency and managing expectations effectively.',
                                     id: '01'
                                 },
                                 {
                                     title: 'Data-Driven Decisions',
-                                    desc: 'Using metrics and analysis to guide strategy and optimize outcomes.',
+                                    desc: 'Designing scalable, maintainable, and user-friendly systems that stand the test of time and scale.',
                                     id: '02'
                                 },
                                 {
                                     title: 'Agile Adaptability',
-                                    desc: 'Embracing change and iterating quickly to deliver value in dynamic environments.',
+                                    desc: 'Responding to change while protecting delivery momentum. Pragmatic application of Agile methodologies.',
                                     id: '03'
                                 }
                             ].map((item, i) => (
@@ -145,9 +141,9 @@ export const AboutPage = () => {
                             <h2 className="text-4xl font-semibold text-gray-900 mb-12">Core Expertise</h2>
                             <div className="space-y-8">
                                 {[
-                                    { title: 'Project Management', desc: 'Agile, Scrum, Waterfall methodologies.' },
-                                    { title: 'Business Analysis', desc: 'Requirement gathering, process modeling, gap analysis.' },
-                                    { title: 'Solution Architecture', desc: 'Designing scalable and robust software systems.' }
+                                    { title: 'Project Management', desc: 'Agile/Scrum Leadership, Risk Mitigation, Resource Allocation' },
+                                    { title: 'Business Analysis', desc: 'Requirement Gathering, Process Modeling, Stakeholder Management' },
+                                    { title: 'Solution Architecture', desc: 'System Architecture, UX/UI Strategy, Tech Stack Selection' }
                                 ].map((item, i) => (
                                     <div key={i}>
                                         <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
@@ -160,9 +156,9 @@ export const AboutPage = () => {
                             <h2 className="text-4xl font-semibold text-gray-900 mb-12">Technical Skills</h2>
                             <div className="space-y-8">
                                 {[
-                                    { title: 'Full Stack Development', desc: 'React, Node.js, TypeScript, PostgreSQL.' },
-                                    { title: 'Cloud Infrastructure', desc: 'AWS, Azure, Docker, Kubernetes.' },
-                                    { title: 'Data Analytics', desc: 'Python, PowerBI, SQL, Tableau.' }
+                                    { title: 'Methodologies', desc: 'RScrum, Kanban, Waterfall, Lean Six Sigma.' },
+                                    { title: 'Documentation', desc: 'BRD, FRD, User Stories, API Specifications' },
+                                    { title: 'Data Analytics', desc: 'SQL, Excel Advanced, Tableau, Power BI.' }
                                 ].map((item, i) => (
                                     <div key={i}>
                                         <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
@@ -217,25 +213,36 @@ export const AboutPage = () => {
                             <h2 className="text-4xl font-semibold text-gray-900 mb-12">Education</h2>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-lg font-semibold text-gray-900 mb-1">MBA in Project Management</h4>
-                                    <p className="text-gray-500 mb-2">Cardiff Metropolitan University | 2021</p>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-1">MBA – Project Management (In Progress)</h4>
+                                    <p className="text-gray-500 mb-2">Cardiff Metropolitan University, UK</p>
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-semibold text-gray-900 mb-1">B.Sc. (Hons) in Software Engineering</h4>
-                                    <p className="text-gray-500">Plymouth University | 2018</p>
+                                    <p className="text-gray-500">University of Kelaniya</p>
                                 </div>
                             </div>
                         </div>
                         <div>
                             <h2 className="text-4xl font-semibold text-gray-900 mb-12">Certifications</h2>
-                            <div className="space-y-8">
+                            <div className="space-y-2">
                                 <div>
-                                    <h4 className="text-lg font-semibold text-gray-900 mb-1">PMP® Certification</h4>
-                                    <p className="text-gray-500 mb-2">Project Management Institute</p>
+                                    <p className="text-gray-500 mb-2">Agile Scrum Master</p>
                                 </div>
                                 <div>
-                                    <h4 className="text-lg font-semibold text-gray-900 mb-1">AWS Solution Architect</h4>
-                                    <p className="text-gray-500">Amazon Web Services</p>
+                                    <p className="text-gray-500">Disciplined Agile</p>
+                                    
+                                </div>
+                                <div>
+                                    <p className="text-gray-500">PRINCE2 Preparation</p>
+                                    
+                                </div>
+                                <div>
+                                    <p className="text-gray-500">Software Architecture</p>
+                                    
+                                </div>
+                                <div>
+                                    <p className="text-gray-500">Generative AI for Project Managers</p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -250,21 +257,21 @@ export const AboutPage = () => {
                             {[
                                 {
                                     role: 'Project Manager & Business Analyst',
-                                    company: 'Cenzios',
+                                    company: 'Cenzios Pvt Ltd',
                                     period: '2021 - Present',
-                                    desc: 'Leading digital transformation initiatives and managing multi-disciplinary teams.'
+                                    desc: 'Leading digital transformation projects and software development lifecycles for global clients.'
                                 },
                                 {
                                     role: 'Associate Project Manager',
-                                    company: 'Innovate Tech',
-                                    period: '2019 - 2021',
-                                    desc: 'Facilitating agile ceremonies and coordinating cross-functional product development.'
+                                    company: 'Aventure IT',
+                                    period: '2018 - 2021',
+                                    desc: 'Managed high-value portfolios and developed strategic financial roadmaps for corporate clients.'
                                 },
                                 {
-                                    role: 'Software Engineer',
-                                    company: 'DevSolutions',
-                                    period: '2018 - 2019',
-                                    desc: 'Developing full-stack web applications and optimizing system performance.'
+                                    role: 'Junior Analyst',
+                                    company: 'Softlogic Finance',
+                                    period: '2016 - 2018',
+                                    desc: 'Analyzed market trends and supported senior management in operational decision making.'
                                 }
                             ].map((job, i) => (
                                 <div key={i} className="mb-12 ml-8 relative">
@@ -284,10 +291,7 @@ export const AboutPage = () => {
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-4xl font-semibold mb-8">Beyond Work</h2>
                         <p className="text-xl text-gray-400 leading-relaxed mb-12">
-                            When I'm not managing projects, I enjoy contributing to open-source software,
-                            mentoring aspiring tech professionals, and exploring the latest trends in
-                            AI and machine learning. I believe in giving back to the community and
-                            continually expanding my horizons.
+                            When I'm not optimizing workflows, I explore the landscapes of Sri Lanka through photography and mentoring young tech enthusiasts, believing that balance is the key to sustained creativity.
                         </p>
                     </div>
                 </section>
