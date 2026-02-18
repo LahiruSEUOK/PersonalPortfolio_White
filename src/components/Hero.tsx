@@ -1,5 +1,5 @@
-import { ArrowRight } from 'lucide-react';
-import profile from '../assets/profile.svg';
+import { ArrowRight } from "lucide-react";
+import profile from "../assets/profile.svg";
 
 export const Hero = () => {
   return (
@@ -14,15 +14,17 @@ export const Hero = () => {
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#333333] mb-4">
-          Lahir Sandeepa
+          Lahiru Sandeepa
         </h1>
 
-        <p className="text-lg sm:text-xl text-gray-600 mb-2">
+        <p className="text-lg sm:text-xl font-normal text-gray-700 mb-2">
           Project Manager | Business Analyst | Solution Designer
         </p>
 
-        <p className="text-base sm:text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-          I transform ideas into strategic, results-driven solutions by combining business insight, technical expertise, and structured project delivery to create measurable impact.
+        <p className="text-base sm:text-lg text-gray-500 font-light mb-8 max-w-2xl mx-auto">
+          I transform ideas into strategic, results-driven solutions by
+          combining business insight, technical expertise, and structured
+          project delivery to create measurable impact.
         </p>
 
         <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg">
