@@ -5,6 +5,20 @@ import {
     Award
 } from 'lucide-react';
 
+import {
+    FaJira,
+    FaFigma,
+    FaGithub,
+    FaDocker,
+    FaAws,
+    FaSlack,
+    FaTrello
+} from 'react-icons/fa';
+import { SiConfluence, SiNotion, SiPostman, SiTableau } from 'react-icons/si';
+
+
+import { VscVscode } from 'react-icons/vsc';
+
 export const AboutPage = () => {
     return (
         <MainLayout>
@@ -27,7 +41,7 @@ export const AboutPage = () => {
                 {/* Who I Am Section */}
                 <section className="py-24 bg-[#F8F9FA] px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                        <h2 className="text-4xl font-bold text-gray-900">Who I Am</h2>
+                        <h2 className="text-6xl font-bold text-gray-900">Who I Am</h2>
                         <div className="space-y-6">
                             <p className="text-lg text-gray-600 leading-relaxed">
                                 As a project manager and technical lead, I bridge the gap between business vision
@@ -163,17 +177,36 @@ export const AboutPage = () => {
                 {/* Tools & Technologies */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8 text-center">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-16">Tools & Technologies</h2>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {[
-                                'Jira', 'Confluence', 'Figma', 'GitHub', 'VS Code', 'Docker', 'AWS',
-                                'Postman', 'Tableau', 'PowerBI', 'Slack', 'Trello', 'Notion'
-                            ].map((tool) => (
-                                <span key={tool} className="px-6 py-2 bg-white border border-gray-100 rounded-full shadow-sm text-gray-600 font-medium hover:border-blue-200 transition-colors">
-                                    {tool}
-                                </span>
-                            ))}
-                        </div>
+                        <h2 className="text-4xl font-bold text-gray-900 mb-16">
+                            Tools & Technologies
+                        </h2>
+
+                        <div className="flex flex-wrap justify-center gap-6">
+  {[
+    { name: 'Jira', icon: <FaJira color="#2684FF" /> },
+    { name: 'Confluence', icon: <SiConfluence color="#172B4D" /> },
+    { name: 'Figma', icon: <FaFigma color="#F24E1E" /> },
+    { name: 'GitHub', icon: <FaGithub color="#181717" /> },
+    { name: 'VS Code', icon: <VscVscode color="#007ACC" /> },
+    { name: 'Docker', icon: <FaDocker color="#2496ED" /> },
+    { name: 'AWS', icon: <FaAws color="#FF9900" /> },
+    { name: 'Postman', icon: <SiPostman color="#FF6C37" /> },
+    { name: 'Tableau', icon: <SiTableau color="#E97627" /> },
+    { name: 'Slack', icon: <FaSlack color="#4A154B" /> },
+    { name: 'Trello', icon: <FaTrello color="#0052CC" /> },
+    { name: 'Notion', icon: <SiNotion color="#000000" /> },
+  ].map((tool) => (
+    <div
+      key={tool.name}
+      className="flex items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full shadow-sm text-gray-700 font-medium hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+    >
+      <span className="text-lg">
+        {tool.icon}
+      </span>
+      <span>{tool.name}</span>
+    </div>
+  ))}
+</div>
                     </div>
                 </section>
 

@@ -1,3 +1,5 @@
+import about from '../assets/BridgingStrategy.svg';
+
 export const About = () => {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -35,7 +37,7 @@ export const About = () => {
           </div>
           <div>
             <img
-              src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop"
+              src={about}
               alt="Team collaboration"
               className="w-full rounded-2xl shadow-2xl object-cover h-96"
             />

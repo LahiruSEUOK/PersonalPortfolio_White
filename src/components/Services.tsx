@@ -5,7 +5,7 @@ export const Services = () => {
     {
       icon: Briefcase,
       title: 'Project Management',
-      description: 'End-to-end project oversight with agile methodologies to ensure timely and quality delivery.',
+      description: 'Leading complex software projects from concept to delivery using Agile, Scrum, and hybrid methodologies.',
     },
     {
       icon: BarChart3,
