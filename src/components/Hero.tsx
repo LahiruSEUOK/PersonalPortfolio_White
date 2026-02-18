@@ -13,9 +13,9 @@ export const Hero = () => {
           />
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-          Lahir Sandeepa
-        </h1>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#333333] mb-4">
+  Lahir Sandeepa
+</h1>
 
         <p className="text-lg sm:text-xl text-gray-600 mb-2">
           Project Manager | Business Analyst | Solution Designer

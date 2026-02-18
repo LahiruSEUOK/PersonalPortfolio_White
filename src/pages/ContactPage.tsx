@@ -67,7 +67,7 @@ export const ContactPage = () => {
                                     <ContactInfo icon={Mail} label="Email" value="lahirusandeepa22@gmail.com" />
                                     <ContactInfo icon={Phone} label="Phone" value="+94 71 118 6028" />
                                     <ContactInfo icon={Linkedin} label="LinkedIn" value="linkedin.com/in/lahiru-sandeepa" />
-                                    <ContactInfo icon={MapPin} label="Location" value="Matara/Colombo, Sri Lanka" />
+                                    <ContactInfo icon={MapPin} label="Location" value="kandy, Sri Lanka" />
                                     <ContactInfo icon={Clock} label="Availability" value="Freelance, Mon - Sat, 09:00 - 18:00" />
                                 </div>
                             </div>
