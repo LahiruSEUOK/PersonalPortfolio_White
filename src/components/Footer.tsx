@@ -16,10 +16,10 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-900 mb-3">
               Lahir Sandeepa
             </h3>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-[#8B9096] mb-4">
               Project Manager | Business Analyst | Solution Designer
             </p>
-            <p className="text-sm text-gray-500 leading-relaxed">
+            <p className="text-sm text-[#8B9096] leading-relaxed">
               Transforming business challenges into scalable software
               solutions through strategic planning, technical expertise,
               and proven agile methodologies.
@@ -28,7 +28,7 @@ export const Footer = () => {
 
           {/* Column 2 - Quick Links */}
           <div>
-            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+            <h4 className="text-xs font-semibold text-[#8B9096] uppercase tracking-wider mb-4">
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm">
@@ -54,7 +54,7 @@ export const Footer = () => {
 
           {/* Column 3 - Services */}
           <div>
-            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+            <h4 className="text-xs font-semibold text-[#8B9096] uppercase tracking-wider mb-4">
               Services
             </h4>
             <ul className="space-y-3 text-sm">
@@ -76,7 +76,7 @@ export const Footer = () => {
 
           {/* Column 4 - Contact */}
           <div>
-            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+            <h4 className="text-xs font-semibold text-[#8B9096] uppercase tracking-wider mb-4">
               Contact
             </h4>
 
@@ -104,7 +104,7 @@ export const Footer = () => {
 
           {/* Column 5 - Follow Me */}
           <div>
-            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+            <h4 className="text-xs font-semibold text-[#8B9096] uppercase tracking-wider mb-4">
               Follow Me
             </h4>
 

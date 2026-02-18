@@ -1,21 +1,24 @@
-import { Lightbulb, CheckCircle, MessageSquare } from 'lucide-react';
+import { Zap, CheckCircle, MessageSquare } from "lucide-react";
 
 export const Benefits = () => {
   const benefits = [
     {
-      icon: Lightbulb,
-      title: 'Strategic Thinking',
-      description: 'Combining technical expertise with business strategy to design future-ready systems.',
+      icon: Zap,
+      title: "Strategic Thinking",
+      description:
+        "Data-driven approach to problem-solving and opportunity identification.",
     },
     {
       icon: CheckCircle,
-      title: 'Proven Delivery',
-      description: 'Consistent track record of delivering complex projects on time and within scope.',
+      title: "Proven Delivery",
+      description:
+        "Consistent track record of on-time and on-budget project delivery.",
     },
     {
       icon: MessageSquare,
-      title: 'Clear Communication',
-      description: 'Transparent updates, proactive management, and aligned stakeholders throughout the lifecycle.',
+      title: "Clear Communication",
+      description:
+        "Transparent and collaborative approach to stakeholder management.",
     },
   ];
 
@@ -23,7 +26,7 @@ export const Benefits = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-[#333333] mb-4">
             Why Work With Me
           </h2>
         </div>
@@ -33,11 +36,11 @@ export const Benefits = () => {
             const Icon = benefit.icon;
             return (
               <div key={index} className="text-center">
-                <Icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <Icon className="w-12 h-12 text-[#2B7BE9] mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-[#333333] mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-[#9CA3AF] leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

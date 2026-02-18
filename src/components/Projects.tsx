@@ -38,7 +38,7 @@ export const Projects = () => {
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-24">
-          <h2 className="text-4xl font-semibold text-gray-900">
+          <h2 className="text-4xl font-semibold text-[#333333]">
             Featured Projects
           </h2>
         </div>
@@ -54,17 +54,17 @@ export const Projects = () => {
                 />
               </div>
               <div className="space-y-6">
-                <span className="text-sm font-medium text-gray-400 uppercase tracking-widest">
+                <span className="text-sm font-medium text-[#9CA3AF] uppercase tracking-widest">
                   {project.id}
                 </span>
-                <h3 className="text-4xl lg:text-5xl font-semibold text-gray-900 tracking-tight">
+                <h3 className="text-4xl lg:text-4xl font-semibold text-[#333333] tracking-tight">
                   {project.title}
                 </h3>
-                <p className="text-lg text-gray-500 leading-relaxed max-w-lg">
+                <p className="text-lg text-[#9CA3AF] leading-relaxed max-w-lg">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500 font-medium">
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#9CA3AF] font-medium">
                   <span>{project.role}</span>
                   <span className="w-1 h-1 bg-gray-300 rounded-full" />
                   <span>{project.duration}</span>
