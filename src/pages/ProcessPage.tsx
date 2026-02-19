@@ -11,42 +11,54 @@ import {
     ArrowRight
 } from 'lucide-react';
 
-const ProcessStep = ({ number, title, description, keyActivities, deliverables, duration }: any) => (
-    <div className="flex flex-col md:flex-row gap-12 mb-32 group">
-        <div className="md:w-1/4">
-            <span className="text-8xl font-bold text-gray-100 group-hover:text-blue-50 transition-colors duration-500">
-                {number}
-            </span>
-        </div>
-        <div className="md:w-3/4 space-y-8">
-            <h3 className="text-3xl font-semibold text-gray-900">{title}</h3>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-                {description}
-            </p>
-            <div className="grid grid-cols-2 gap-8">
-                <div className="space-y-2">
-                    <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider">Key Activities</h4>
-                    <ul className="space-y-1">
-                        {keyActivities.map((item: string, i: number) => (
-                            <li key={i} className="text-gray-900 font-medium">{item}</li>
-                        ))}
-                    </ul>
-                </div>
-                <div className="space-y-2">
-                    <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider">Deliverables</h4>
-                    <ul className="space-y-1">
-                        {deliverables.map((item: string, i: number) => (
-                            <li key={i} className="text-gray-900 font-medium">{item}</li>
-                        ))}
-                    </ul>
-                </div>
+const ProcessStep = ({ number, title, description, keyActivities, deliverables, duration, isLast }: any) => (
+    <div>
+        <div className="flex flex-col md:flex-row gap-8 md:gap-16 py-16">
+            {/* Left: Large number */}
+            <div className="md:w-32 flex-shrink-0">
+                <span className="text-7xl md:text-8xl font-bold text-gray-200 leading-none select-none">
+                    {number}
+                </span>
             </div>
-            {duration && (
-                <div className="inline-block bg-gray-100 rounded-full px-4 py-2">
-                    <span className="text-sm font-semibold text-gray-600">Typical Duration: {duration}</span>
+
+            {/* Right: Content */}
+            <div className="flex-1 space-y-8">
+                <div>
+                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3">{title}</h3>
+                    <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl">
+                        {description}
+                    </p>
                 </div>
-            )}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-3">
+                        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Key Activities</h4>
+                        <ul className="space-y-1.5">
+                            {keyActivities.map((item: string, i: number) => (
+                                <li key={i} className="text-gray-800 font-medium text-sm">{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Deliverables</h4>
+                        <ul className="space-y-1.5">
+                            {deliverables.map((item: string, i: number) => (
+                                <li key={i} className="text-gray-800 font-medium text-sm">{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
+                {duration && (
+                    <div className="inline-block bg-gray-100 rounded-full px-4 py-2">
+                        <span className="text-sm font-semibold text-gray-600">Typical Duration: <span className="font-bold text-gray-800">{duration}</span></span>
+                    </div>
+                )}
+            </div>
         </div>
+
+        {/* Divider between steps */}
+        {!isLast && <div className="border-t border-gray-200" />}
     </div>
 );
 
@@ -184,7 +196,7 @@ export const ProcessPage = () => {
                 {/* Steps */}
                 <section className="px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
                     {steps.map((step, i) => (
-                        <ProcessStep key={i} {...step} />
+                        <ProcessStep key={i} {...step} isLast={i === steps.length - 1} />
                     ))}
                 </section>
 
@@ -193,7 +205,6 @@ export const ProcessPage = () => {
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-4xl font-semibold text-gray-900 text-center mb-16">Transparent & Structured Communication</h2>
                         <div className="grid md:grid-cols-2 gap-12">
-                            {/* How I Keep You Informed */}
                             <div className="bg-white p-10 rounded-[32px] shadow-sm space-y-6">
                                 <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
                                     <MessageSquare className="text-blue-600" size={24} />
@@ -207,7 +218,6 @@ export const ProcessPage = () => {
                                     <li><span className="font-semibold text-gray-800">Ad-hoc updates</span> for critical decisions</li>
                                 </ul>
                             </div>
-                            {/* Tools I Use */}
                             <div className="bg-white p-10 rounded-[32px] shadow-sm space-y-6">
                                 <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
                                     <Zap className="text-blue-600" size={24} />

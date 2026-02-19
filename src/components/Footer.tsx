@@ -82,18 +82,35 @@ export const Footer = () => {
 
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3">
-                <Mail size={16} className="text-gray-500" />
-                <span>lahirusandeepa22@gmail.com</span>
+                <Mail size={16} className="text-gray-500 shrink-0" />
+                <a
+                  href="mailto:lahirusandeepa22@gmail.com"
+                  className="hover:text-blue-600 transition-colors break-all"
+                >
+                  lahirusandeepa22@gmail.com
+                </a>
               </li>
 
               <li className="flex items-center gap-3">
-                <Phone size={16} className="text-gray-500" />
-                <span>+94 71 118 6028</span>
+                <Phone size={16} className="text-gray-500 shrink-0" />
+                <a
+                  href="tel:+94711186028"
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  +94 71 118 6028
+                </a>
               </li>
 
               <li className="flex items-center gap-3">
-                <MessageCircle size={16} className="text-gray-500" />
-                <span>+94 71 118 6028</span>
+                <MessageCircle size={16} className="text-gray-500 shrink-0" />
+                <a
+                  href="https://wa.me/94711186028"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  +94 71 118 6028
+                </a>
               </li>
             </ul>
 
@@ -110,18 +127,39 @@ export const Footer = () => {
 
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
-                <Linkedin size={16} className="text-gray-500" />
-                <span>LinkedIn</span>
+                <Linkedin size={16} className="text-gray-500 shrink-0" />
+                <a
+                  href="https://linkedin.com/in/lahiru-sandeepa"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  LinkedIn
+                </a>
               </li>
 
               <li className="flex items-center gap-3">
-                <Facebook size={16} className="text-gray-500" />
-                <span>Facebook</span>
+                <Facebook size={16} className="text-gray-500 shrink-0" />
+                <a
+                  href="https://www.facebook.com/share/17EZTVPzR1/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  Facebook
+                </a>
               </li>
 
               <li className="flex items-center gap-3">
-                <Briefcase size={16} className="text-gray-500" />
-                <span>Portfolio</span>
+                <Briefcase size={16} className="text-gray-500 shrink-0" />
+                <a
+                  href="https://lahirusandeepa.online"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  Portfolio
+                </a>
               </li>
             </ul>
           </div>
@@ -130,7 +168,6 @@ export const Footer = () => {
         {/* Bottom Divider */}
         <div className="border-t border-gray-300 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
           <p>© {currentYear} Lahir Sandeepa. All rights reserved.</p>
-          {/* <p>Designed with simplicity.</p> */}
         </div>
 
       </div>
