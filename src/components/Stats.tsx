@@ -1,6 +1,6 @@
 export const Stats = () => {
   const stats = [
-    { value: '3+', label: 'Years Experience' },
+    { value: '7+', label: 'Years Experience' },
     { value: '120+', label: 'Projects Completed' },
     { value: '40+', label: 'Clients Served' },
     { value: '98%', label: 'Client Satisfaction' },
