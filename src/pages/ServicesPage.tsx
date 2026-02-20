@@ -12,7 +12,12 @@ import {
     CheckCircle,
     ArrowRight,
     Wrench,
-    Rocket
+    Rocket,
+    BarChart,
+    FileText,
+    Layers,
+    Package
+    
 } from 'lucide-react';
 
 interface SubSection {
@@ -103,7 +108,7 @@ const ServiceCard = ({ icon: Icon, title, description, benefits, right }: Servic
 export const ServicesPage = () => {
     const services: ServiceCardProps[] = [
         {
-            icon: Briefcase,
+            icon: BarChart,
             title: 'Project Management',
             description: 'I lead software projects from idea to delivery — managing scope, timelines, budgets, and cross-functional teams using Agile and hybrid methodologies.',
             benefits: [
@@ -120,7 +125,7 @@ export const ServicesPage = () => {
             }
         },
         {
-            icon: BarChart3,
+            icon: FileText,
             title: 'Business Analysis',
             description: 'I translate business vision into clear, structured requirements that technical teams can execute with precision.',
             benefits: [
@@ -142,7 +147,7 @@ export const ServicesPage = () => {
             }
         },
         {
-            icon: Zap,
+            icon: Layers,
             title: 'Solution Design & Architecture',
             description: 'I design scalable, maintainable system architectures that align technical capabilities with long-term business growth.',
             benefits: [
@@ -159,7 +164,7 @@ export const ServicesPage = () => {
             }
         },
         {
-            icon: Code,
+            icon: Package,
             title: 'Custom Software Project Delivery',
             description: 'End-to-end leadership for custom software delivery — from concept to deployment.',
             benefits: [
@@ -175,7 +180,7 @@ export const ServicesPage = () => {
             }
         },
         {
-            icon: RefreshCw,
+            icon: Zap,
             title: 'Agile Transformation',
             description: 'I help teams adopt agile frameworks and optimize processes to increase delivery speed and performance.',
             benefits: [
