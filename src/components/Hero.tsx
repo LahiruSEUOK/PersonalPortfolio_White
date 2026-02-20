@@ -27,8 +27,8 @@ export const Hero = () => {
           project delivery to create measurable impact.
         </p>
 
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg">
-          Get In Touch
+        <button className="bg-[#0073EC] hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg">
+          Schedule a Call
           <ArrowRight size={20} />
         </button>
       </div>

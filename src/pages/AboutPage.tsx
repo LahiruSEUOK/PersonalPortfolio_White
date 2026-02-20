@@ -31,7 +31,7 @@ export const AboutPage = () => {
             Lahiru Sandeepa
           </h1>
           <p className="text-xl text-gray-500 font-medium mb-8">
-            Project Manager | Business Analyst | Solution Architect
+            Project Manager | Business Analyst | Solution Designer
           </p>
           <p className="text-lg text-[#111111] leading-relaxed max-w-2xl mx-auto">
             Over 7+ years in the software industry, I specialize in transforming

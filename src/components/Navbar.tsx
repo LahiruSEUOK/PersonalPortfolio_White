@@ -1,9 +1,10 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -14,12 +15,14 @@ export const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <nav className="fixed w-full bg-white shadow-sm z-50">
+    <nav className="fixed w-full bg-[#FBFBFD] shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
         {/* Navbar Container */}
-        <div className="flex items-center justify-between h-16 relative">
+        <div className="flex items-center justify-between h-14 relative">
 
           <Link to="/" className="text-xl font-semibold text-gray-900">
 
@@ -31,7 +34,9 @@ export const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 text-sm font-medium hover:text-blue-600 transition-colors"
+                className={`text-sm font-normal transition-colors ${
+                  isActive(item.path) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                }`}
                 onClick={() => {
                   if (item.path.startsWith('/#')) {
                     const id = item.path.substring(2);
@@ -63,7 +68,9 @@ export const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="block py-2 text-gray-700 hover:text-blue-600"
+                className={`block py-2 ${
+                  isActive(item.path) ? 'text-blue-600 font-medium' : 'text-gray-700 hover:text-blue-600'
+                }`}
                 onClick={() => {
                   setIsOpen(false);
                   if (item.path.startsWith('/#')) {

@@ -14,7 +14,7 @@ export const Footer = () => {
           {/* Column 1 - About */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">
-              Lahir Sandeepa
+              Lahiru Sandeepa
             </h3>
             <p className="text-sm text-[#8B9096] mb-4">
               Project Manager | Business Analyst | Solution Designer
@@ -167,7 +167,7 @@ export const Footer = () => {
 
         {/* Bottom Divider */}
         <div className="border-t border-gray-300 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
-          <p>© {currentYear} Lahir Sandeepa. All rights reserved.</p>
+          <p>© {currentYear} Lahiru Sandeepa. All rights reserved.</p>
         </div>
 
       </div>
