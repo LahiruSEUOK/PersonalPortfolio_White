@@ -42,10 +42,12 @@ export const Hero = () => {
           className="text-base sm:text-lg text-gray-500 font-light mb-8 max-w-2xl mx-auto"
           variants={fadeInUp}
         >
-          I transform ideas into strategic, results-driven solutions by
-          combining business insight, technical expertise, and structured
-          project delivery to create measurable impact.
+          <br />
+          Struggling with technical challenges? 
+          <br />
+          I help you solve them with clear strategy, smart engineering, and reliable delivery.
         </motion.p>
+
 
         <motion.button
           className="bg-[#0073EC] hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
@@ -53,8 +55,8 @@ export const Hero = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
         >
-          Schedule a Call
-          <ArrowRight size={20} />
+          Schedule a Call 
+    
         </motion.button>
       </motion.div>
     </section>
