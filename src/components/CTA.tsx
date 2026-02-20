@@ -8,11 +8,11 @@ export const CTA = () => {
           Ready to Start Your Next Project?
         </h2>
         <p className="text-[#9CA3AF] text-lg mb-8">
-          Let's discuss how I can help transform your business vision into reality.
+     Let’s transform your business challenges into scalable, high-impact software solutions.
         </p>
         <button className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg">
           Schedule a Call
-          <ArrowRight size={20} />
+          {/* <ArrowRight size={20} /> */}
         </button>
       </div>
     </section>

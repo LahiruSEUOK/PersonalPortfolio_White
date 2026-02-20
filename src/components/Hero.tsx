@@ -17,19 +17,20 @@ export const Hero = () => {
           Lahiru Sandeepa
         </h1>
 
-        <p className="text-lg sm:text-xl font-normal text-gray-700 mb-2">
+        <p className="text-lg sm:text-l font-normal text-gray-700 mb-2">
           Project Manager | Business Analyst | Solution Designer
         </p>
 
         <p className="text-base sm:text-lg text-gray-500 font-light mb-8 max-w-2xl mx-auto">
-          I transform ideas into strategic, results-driven solutions by
-          combining business insight, technical expertise, and structured
-          project delivery to create measurable impact.
+         <br />
+         Struggling with technical challenges? 
+         <br />
+         I help you solve them with clear strategy, smart engineering, and reliable delivery.
         </p>
 
         <button className="bg-[#0073EC] hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg">
           Schedule a Call
-          <ArrowRight size={20} />
+          {/* <ArrowRight size={20} /> */}
         </button>
       </div>
     </section>
