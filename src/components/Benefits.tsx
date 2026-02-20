@@ -31,15 +31,20 @@ export const Benefits = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 justify-items-center">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
-              <div key={index} className="text-center">
-                <Icon className="w-12 h-12 text-[#2B7BE9] mx-auto mb-4" />
+              <div
+                key={index}
+                className="max-w-sm w-full text-left"
+              >
+                <Icon className="w-9 h-9 text-[#2B7BE9] mb-4" />
+
                 <h3 className="text-xl font-semibold text-[#333333] mb-3">
                   {benefit.title}
                 </h3>
+
                 <p className="text-[#9CA3AF] leading-relaxed">
                   {benefit.description}
                 </p>

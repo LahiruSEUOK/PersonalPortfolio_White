@@ -13,11 +13,11 @@ export const Hero = () => {
           />
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#333333] mb-4">
+        <h1 className="text-4xl sm:text-5xl lg:text-[50px] font-semibold text-[#333333] mb-4">
           Lahiru Sandeepa
         </h1>
 
-        <p className="text-lg sm:text-l font-normal text-gray-700 mb-2">
+        <p className="text-[16px] sm:text-l font-normal text-gray-700 mb-2">
           Project Manager | Business Analyst | Solution Designer
         </p>
 
@@ -28,7 +28,8 @@ export const Hero = () => {
          I help you solve them with clear strategy, smart engineering, and reliable delivery.
         </p>
 
-        <button className="bg-[#0073EC] hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg">
+        <button className="bg-[#0073EC] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg" 
+      >
           Schedule a Call
           {/* <ArrowRight size={20} /> */}
         </button>

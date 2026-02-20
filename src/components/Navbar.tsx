@@ -22,7 +22,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
         {/* Navbar Container */}
-        <div className="flex items-center justify-between h-14 relative">
+        <div className="flex items-center justify-between h-8 relative">
 
           <Link to="/" className="text-xl font-semibold text-gray-900">
 
@@ -34,7 +34,7 @@ export const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-normal transition-colors ${
+                className={`text-[12px] font-normal transition-colors ${
                   isActive(item.path) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                 }`}
                 onClick={() => {
