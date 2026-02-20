@@ -41,7 +41,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon: Icon, title, description, benefits, right }: ServiceCardProps) => (
-    <div className="bg-white rounded-[32px] p-8 lg:p-12 mb-12 shadow-sm border border-gray-50">
+    <div className="bg-gray-100 rounded-[32px] p-8 lg:p-12 mb-12 shadow-sm border border-gray-50">
         {/* Top: Icon + Title + Description — full width */}
         <div className="mb-10">
             <div className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center shadow-sm mb-6">
@@ -218,7 +218,7 @@ export const ServicesPage = () => {
                 </section>
 
                 {/* Process Section */}
-                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
                             <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">How We Work</span>
