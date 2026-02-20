@@ -4,7 +4,6 @@ import {
   fadeInUp,
   fadeInDown,
   staggerContainer,
-  cardHover,
   iconBounce,
 } from "../hooks/useAnimations";
 
@@ -74,7 +73,7 @@ export const Services = () => {
             return (
               <motion.div
                 key={index}
-                className="bg-white p-8 rounded-lg shadow-md cursor-default"
+                className="bg-white p-8 rounded-3xl shadow-md cursor-default"
                 variants={fadeInUp}
                 initial="rest"
                 whileHover="hover"
@@ -86,18 +85,12 @@ export const Services = () => {
                 >
                   <Icon className="w-7 h-7 text-[#333333]" />
                 </motion.div>
-                <motion.div
-                  variants={cardHover}
-                  className="rounded-lg"
-                  style={{ padding: 0 }}
-                >
-                  <h3 className="text-[24px] font-semibold text-[#333333] mb-3">
+                <h3 className="text-[24px] font-semibold text-[#333333] mb-3">
                     {service.title}
                   </h3>
                   <p className="text-[#9CA3AF] text-[14px] leading-relaxed">
                     {service.description}
                   </p>
-                </motion.div>
               </motion.div>
             );
           })}
