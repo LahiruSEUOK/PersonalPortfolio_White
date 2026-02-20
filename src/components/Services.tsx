@@ -1,4 +1,12 @@
 import { BarChart, BarChart3, Layers, Code2 } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  fadeInUp,
+  fadeInDown,
+  staggerContainer,
+  cardHover,
+  iconBounce,
+} from "../hooks/useAnimations";
 
 export const Services = () => {
   const services = [
@@ -22,7 +30,7 @@ export const Services = () => {
     },
     {
       icon: Code2,
-      title: <> Sustom <br /> Software</>,
+      title: <> Custom <br /> Software</>,
       description:
         "Scalable and maintainable software solutions built with modern technologies.",
     },
@@ -31,37 +39,69 @@ export const Services = () => {
   return (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-[#333333] mb-4">
+        {/* Section Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <motion.h2
+            className="text-3xl sm:text-4xl font-semibold text-[#333333] mb-4"
+            variants={fadeInDown}
+          >
             What I Do
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p
+            className="text-gray-600 text-lg max-w-2xl mx-auto"
+            variants={fadeInUp}
+          >
             Comprehensive services to accelerate your business growth and
             digital transformation
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Service Cards */}
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                className="bg-white p-8 rounded-lg shadow-md cursor-default"
+                variants={fadeInUp}
+                initial="rest"
+                whileHover="hover"
+                animate="rest"
               >
-                <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                <motion.div
+                  className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+                  variants={iconBounce}
+                >
                   <Icon className="w-7 h-7 text-[#333333]" />
-                </div>
-                <h3 className="text-[24px] font-semibold text-[#333333] mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-[#9CA3AF] text-[14px] leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+                </motion.div>
+                <motion.div
+                  variants={cardHover}
+                  className="rounded-lg"
+                  style={{ padding: 0 }}
+                >
+                  <h3 className="text-[24px] font-semibold text-[#333333] mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-[#9CA3AF] text-[14px] leading-relaxed">
+                    {service.description}
+                  </p>
+                </motion.div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
