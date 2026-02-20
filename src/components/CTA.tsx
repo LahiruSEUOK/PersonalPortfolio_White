@@ -28,14 +28,15 @@ export const CTA = () => {
           Let's transform your business challenges into scalable, high-impact software solutions.
         </motion.p>
         <motion.div variants={fadeInUp}>
-          <motion.button
+          <motion.a
+            href="tel:+94711186028"
             className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
             animate={buttonPulse}
             whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
             whileTap={{ scale: 0.95 }}
           >
             Schedule a Call
-          </motion.button>
+          </motion.a>
         </motion.div>
       </motion.div>
     </section>

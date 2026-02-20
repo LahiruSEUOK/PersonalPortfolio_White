@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import profile from "../assets/profile.svg";
 import {
@@ -6,6 +5,7 @@ import {
   scaleIn,
   staggerContainer,
   floatingAnimation,
+  buttonPulse,
 } from "../hooks/useAnimations";
 
 export const Hero = () => {
@@ -48,27 +48,23 @@ export const Hero = () => {
           className="text-base sm:text-lg text-gray-500 font-light mb-8 max-w-2xl mx-auto"
           variants={fadeInUp}
         >
-          I transform ideas into strategic, results-driven solutions by
-          combining business insight, technical expertise, and structured
-          project delivery to create measurable impact.
+          <br />
+          Struggling with technical challenges?
+          <br />
+          I help you solve them with clear strategy, smart engineering, and reliable delivery.
         </motion.p>
 
         {/* CTA Button with hover/tap + subtle pulse */}
         <motion.div variants={fadeInUp}>
-          <motion.button
-            className="bg-[#0073EC] hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
-            whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(0, 115, 236, 0.4)' }}
+          <motion.a
+            href="tel:+94711186028"
+            className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
+            animate={buttonPulse}
+            whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
             whileTap={{ scale: 0.95 }}
           >
             Schedule a Call
-            <motion.span
-              className="inline-flex"
-              whileHover={{ x: 4 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              <ArrowRight size={20} />
-            </motion.span>
-          </motion.button>
+          </motion.a>
         </motion.div>
       </motion.div>
     </section>
