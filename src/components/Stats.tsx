@@ -3,10 +3,10 @@ import { fadeInUp, staggerContainer } from "../hooks/useAnimations";
 
 export const Stats = () => {
   const stats = [
-    { value: "7+", label: "Years Experience" },
-    { value: "120+", label: "Projects Completed" },
-    { value: "40+", label: "Clients Served" },
-    { value: "98%", label: "Client Satisfaction" },
+    { value: '7+', label: 'Years Experience' },
+    { value: '15+', label: 'Tema Members Managed' },
+    { value: '20+', label: 'Clients Served' },
+    { value: '100%', label: 'Client Retention' },
   ];
 
   return (

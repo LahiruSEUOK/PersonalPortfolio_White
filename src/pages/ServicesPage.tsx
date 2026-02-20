@@ -12,7 +12,12 @@ import {
     CheckCircle,
     ArrowRight,
     Wrench,
-    Rocket
+    Rocket,
+    BarChart,
+    FileText,
+    Layers,
+    Package
+    
 } from 'lucide-react';
 
 interface SubSection {
@@ -36,7 +41,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon: Icon, title, description, benefits, right }: ServiceCardProps) => (
-    <div className="bg-white rounded-[32px] p-8 lg:p-12 mb-12 shadow-sm border border-gray-50">
+    <div className="bg-gray-100 rounded-[32px] p-8 lg:p-12 mb-12 shadow-sm border border-gray-50">
         {/* Top: Icon + Title + Description — full width */}
         <div className="mb-10">
             <div className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center shadow-sm mb-6">
@@ -103,7 +108,7 @@ const ServiceCard = ({ icon: Icon, title, description, benefits, right }: Servic
 export const ServicesPage = () => {
     const services: ServiceCardProps[] = [
         {
-            icon: Briefcase,
+            icon: BarChart,
             title: 'Project Management',
             description: 'I lead software projects from idea to delivery — managing scope, timelines, budgets, and cross-functional teams using Agile and hybrid methodologies.',
             benefits: [
@@ -120,7 +125,7 @@ export const ServicesPage = () => {
             }
         },
         {
-            icon: BarChart3,
+            icon: FileText,
             title: 'Business Analysis',
             description: 'I translate business vision into clear, structured requirements that technical teams can execute with precision.',
             benefits: [
@@ -142,7 +147,7 @@ export const ServicesPage = () => {
             }
         },
         {
-            icon: Zap,
+            icon: Layers,
             title: 'Solution Design & Architecture',
             description: 'I design scalable, maintainable system architectures that align technical capabilities with long-term business growth.',
             benefits: [
@@ -159,7 +164,7 @@ export const ServicesPage = () => {
             }
         },
         {
-            icon: Code,
+            icon: Package,
             title: 'Custom Software Project Delivery',
             description: 'End-to-end leadership for custom software delivery — from concept to deployment.',
             benefits: [
@@ -175,7 +180,7 @@ export const ServicesPage = () => {
             }
         },
         {
-            icon: RefreshCw,
+            icon: Zap,
             title: 'Agile Transformation',
             description: 'I help teams adopt agile frameworks and optimize processes to increase delivery speed and performance.',
             benefits: [
@@ -213,7 +218,7 @@ export const ServicesPage = () => {
                 </section>
 
                 {/* Process Section */}
-                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
                             <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">How We Work</span>

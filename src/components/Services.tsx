@@ -6,23 +6,23 @@ export const Services = () => {
       icon: BarChart,
       title: "Project Management",
       description:
-        "Leading complex software projects from concept to delivery using Agile, Scrum, and hybrid methodologies.",
+        "Leading complex projects from concept to delivery using Agile, and hybrid methodologies.",
     },
     {
       icon: BarChart3,
-      title: "Business Analysis",
+      title: <> Business <br /> Analysis </>,
       description:
         "Strategic insights and data-driven recommendations to optimize your business operations.",
     },
     {
       icon: Layers,
-      title: "Solution Design",
+      title: <>Solution <br /> Design</>,
       description:
         "Custom solutions tailored to your unique business needs and technical requirements.",
     },
     {
       icon: Code2,
-      title: "Custom Software",
+      title: <> Sustom <br /> Software</>,
       description:
         "Scalable and maintainable software solutions built with modern technologies.",
     },
