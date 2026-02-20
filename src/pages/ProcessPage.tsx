@@ -201,7 +201,7 @@ export const ProcessPage = () => {
                 </section>
 
                 {/* Communication Section */}
-                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-4xl font-semibold text-gray-900 text-center mb-16">Transparent & Structured Communication</h2>
                         <div className="grid md:grid-cols-2 gap-12">
@@ -247,31 +247,56 @@ export const ProcessPage = () => {
                 </section>
 
                 {/* Flexible by Design */}
-                <section className="py-24 px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-4xl font-semibold text-gray-900">Flexible by Design</h2>
-                        <p className="text-xl text-gray-500">I adapt the framework to your organization.</p>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8">
+                <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 text-center">
+                    <div className="max-w-5xl mx-auto">
+
+                        <h2 className="text-5xl font-semibold text-gray-900">
+                            Flexible by Design
+                        </h2>
+
+                        <p className="mt-6 text-xl text-gray-600">
+                            I adapt the framework to your organization.
+                        </p>
+
+                        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
-                                { icon: ShieldCheck, label: 'Waterfall', description: 'Structured upfront planning, phased delivery.' },
-                                { icon: RefreshCw, label: 'Agile', description: 'Iterative sprints, continuous feedback.' },
-                                { icon: Clock, label: 'Hybrid', description: 'Balanced structure with agility.' },
-                                { icon: Handshake, label: 'Remote Teams', description: 'Optimized digital collaboration workflows.' },
+                                {
+                                    label: "Waterfall",
+                                    description: "Structured upfront planning, phased delivery.",
+                                },
+                                {
+                                    label: "Agile",
+                                    description: "Iterative sprints, continuous feedback.",
+                                },
+                                {
+                                    label: "Hybrid",
+                                    description: "Balanced structure with agility.",
+                                },
+                                {
+                                    label: "Remote Teams",
+                                    description: "Optimized digital collaboration workflows.",
+                                },
                             ].map((item, i) => (
-                                <div key={i} className="space-y-4">
-                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm">
-                                        <item.icon className="text-blue-600" size={24} />
-                                    </div>
-                                    <span className="font-bold text-gray-900 block">{item.label}</span>
-                                    <p className="text-sm text-gray-500">{item.description}</p>
+                                <div
+                                    key={i}
+                                    className="bg-gray-100 rounded-2xl p-8 text-left hover:shadow-md transition"
+                                >
+                                    <h3 className="text-lg font-semibold text-gray-900">
+                                        {item.label}
+                                    </h3>
+
+                                    <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+                                        {item.description}
+                                    </p>
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </section>
 
                 {/* What You Can Expect */}
-                <section className="py-24 bg-white px-4 sm:px-6 lg:px-8">
+                <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center space-y-12">
                         <h2 className="text-4xl font-semibold text-gray-900">What You Can Expect</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-left max-w-2xl mx-auto pt-8">
