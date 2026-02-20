@@ -29,7 +29,7 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-semibold text-[#333333] mb-4">

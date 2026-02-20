@@ -46,7 +46,7 @@ export const Projects = () => {
         <div className="space-y-32">
           {projects.map((project, index) => (
             <div key={index} className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-              <div className="bg-white rounded-[32px] p-6 lg:p-12 aspect-[4/3] flex items-center justify-center shadow-sm border border-gray-100">
+              <div className="bg-gray-100 rounded-[32px] p-6 lg:p-12 aspect-[4/3] flex items-center justify-center shadow-sm border border-gray-100">
                 <img
                   src={project.image}
                   alt={project.title}
