@@ -1,12 +1,19 @@
 import about from '../assets/BridgingStrategy.svg';
 import { motion } from 'framer-motion';
-import { fadeInLeft, fadeInRight, fadeInUp, staggerContainer } from '../hooks/useAnimations';
+import {
+  fadeInLeft,
+  fadeInRight,
+  fadeInUp,
+  staggerContainer,
+  scaleInBounce,
+} from '../hooks/useAnimations';
 
 export const About = () => {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Text Column */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -42,13 +49,25 @@ export const About = () => {
                 'Cross-functional team leadership',
                 'Process optimization and automation',
               ].map((item, i) => (
-                <motion.li key={i} className="flex items-start gap-3" variants={fadeInUp}>
-                  <span className="text-blue-600 font-bold mt-1">✓</span>
+                <motion.li
+                  key={i}
+                  className="flex items-start gap-3"
+                  variants={scaleInBounce}
+                >
+                  <motion.span
+                    className="text-blue-600 font-bold mt-1"
+                    whileHover={{ scale: 1.3, rotate: 15 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  >
+                    ✓
+                  </motion.span>
                   <span>{item}</span>
                 </motion.li>
               ))}
             </motion.ul>
           </motion.div>
+
+          {/* Image Column */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -59,8 +78,8 @@ export const About = () => {
               src={about}
               alt="Team collaboration"
               className="w-full rounded-2xl shadow-2xl object-cover h-96"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.03, rotate: 1 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 15 }}
             />
           </motion.div>
         </div>
