@@ -74,7 +74,7 @@ export const Projects = () => {
 
                 <div className="pt-4">
                   <a
-                    href="#"
+                    href="/projects"
                     className="text-[#007AFF] hover:text-blue-700 font-semibold inline-flex items-center gap-2 group transition-colors"
                   >
                     Learn More
