@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profile from "../assets/profile.svg";
+import profile from "../assets/profile.png";
 import {
   fadeInUp,
   scaleIn,
@@ -56,8 +56,10 @@ export const Hero = () => {
 
         {/* CTA Button with hover/tap + subtle pulse */}
         <motion.div variants={fadeInUp}>
-          <motion.a
-            href="tel:+94711186028"
+         <motion.a
+            href="https://cal.com/lahiru-sandeepa-43gdzg" // Your scheduling link
+            target="_blank" 
+            rel="noopener noreferrer"
             className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
             animate={buttonPulse}
             whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
