@@ -114,9 +114,15 @@ export const Footer = () => {
               </li>
             </ul>
 
-            <button className="mt-6 border border-gray-400 text-gray-700 px-5 py-2 rounded-full text-sm hover:bg-gray-200 transition-all">
-              Schedule a Call
-            </button>
+            <a
+              href="https://cal.com/lahiru-sandeepa-43gdzg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="mt-6 border border-gray-400 text-gray-700 px-5 py-2 rounded-full text-sm hover:bg-gray-200 transition-all">
+                Schedule a Call
+              </button>
+            </a>
           </div>
 
           {/* Column 5 - Follow Me */}

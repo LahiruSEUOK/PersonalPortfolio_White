@@ -165,9 +165,9 @@ export const AboutPage = () => {
         </section>
 
         {/* Expertise & Skills */}
-        <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
-            <div>
+        {/* <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20"> */}
+            {/* <div>
               <h2 className="text-[32px] font-semibold text-[#1D1D1F] mb-12">
                 Core Expertise
               </h2>
@@ -194,37 +194,42 @@ export const AboutPage = () => {
                   </div>
                 ))}
               </div>
-            </div>
-            <div>
-              <h2 className="text-[32px] font-semibold text-[#1D1D1F] mb-12">
-                Technical Skills
-              </h2>
-              <div className="space-y-8">
-                {[
-                  {
-                    title: "Full Stack Development",
-                    desc: "React, Node.js, TypeScript, PostgreSQL.",
-                  },
-                  {
-                    title: "Cloud Infrastructure",
-                    desc: "AWS, Azure, Docker, Kubernetes.",
-                  },
-                  {
-                    title: "Data Analytics",
-                    desc: "Python, PowerBI, SQL, Tableau.",
-                  },
-                ].map((item, i) => (
-                  <div key={i}>
-                    <h4 className="text-[19px] font-semibold text-[#1D1D1F] mb-2">
-                      {item.title}
-                    </h4>
-                    <p className="text-[15px] text-[#86868B]">{item.desc}</p>
-                  </div>
-                ))}
+            </div> */}
+                <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-[32px] font-semibold text-[#1D1D1F] mb-12">
+            Core Expertise
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              {
+                title: "Project Management",
+                desc: "Agile, Scrum, Kanban, Waterfall methodologies, risk management and mitigation, budget and resource allocation, stakeholder management and communication, sprint planning and facilitation.",
+              },
+              {
+                title: "Business Analysis",
+                desc: "Requirements gathering and documentation, stakeholder engagement and collaboration, process mapping and optimization, user story development, gap analysis.",
+              },
+              {
+                title: "Solution Design",
+                desc: "Workflow and process design, technical feasibility assessment, UI/UX collaboration, scalability planning, solution architecture.",
+              },
+              {
+                title: "Technical Skills",
+                desc: "API testing, server and environment management, release management, QA testing and test case development, product roadmapping.",
+              },
+            ].map((item, i) => (
+              <div key={i}>
+                <h4 className="text-[19px] font-semibold text-[#1D1D1F] mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-[15px] text-[#86868B]">{item.desc}</p>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Tools & Technologies */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 text-center">
