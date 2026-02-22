@@ -8,18 +8,27 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-import {
-  FaJira,
-  FaFigma,
-  FaGithub,
-  FaDocker,
-  FaAws,
-  FaSlack,
-  FaTrello,
-} from "react-icons/fa";
-import { SiConfluence, SiNotion, SiPostman, SiTableau } from "react-icons/si";
+// Additional local asset imports
+import confluenceIcon from "../assets/confluence.png";
+import dockerIcon from "../assets/docker.png";
+import awsIcon from "../assets/aws.png";
+import githubIcon2 from "../assets/github.png";
+import dockployIcon from "../assets/dockploy.svg";
+import cloudeIcon from "../assets/cloude.svg";
+import cloudflareIcon from "../assets/cloudflare.svg";
+import mongodbIcon from "../assets/mongodb.png";
+import clickupIcon from "../assets/clickup.svg";
+import agileIcon from "../assets/agile.png";
+import scrumIcon from "../assets/scrum.png";
+import kanbanIcon from "../assets/kanban.png";
+import waterfallIcon from "../assets/waterfall.png";
 
-import { VscVscode } from "react-icons/vsc";
+// Local asset imports
+import jiraIcon from "../assets/jira.svg";
+import figmaIcon from "../assets/figma.svg";
+import vscodeIcon from "../assets/vscode.svg";
+import slackIcon from "../assets/slck.svg";
+import postmanIcon from "../assets/postman-inc-48.png";
 
 export const AboutPage = () => {
   return (
@@ -235,18 +244,24 @@ export const AboutPage = () => {
 
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { name: "Jira", icon: <FaJira color="#2684FF" /> },
-                { name: "Confluence", icon: <SiConfluence color="#172B4D" /> },
-                { name: "Figma", icon: <FaFigma color="#F24E1E" /> },
-                { name: "GitHub", icon: <FaGithub color="#181717" /> },
-                { name: "VS Code", icon: <VscVscode color="#007ACC" /> },
-                { name: "Docker", icon: <FaDocker color="#2496ED" /> },
-                { name: "AWS", icon: <FaAws color="#FF9900" /> },
-                { name: "Postman", icon: <SiPostman color="#FF6C37" /> },
-                { name: "Tableau", icon: <SiTableau color="#E97627" /> },
-                { name: "Slack", icon: <FaSlack color="#4A154B" /> },
-                { name: "Trello", icon: <FaTrello color="#0052CC" /> },
-                { name: "Notion", icon: <SiNotion color="#000000" /> },
+                { name: "Jira", icon: <img src={jiraIcon} alt="Jira" className="w-5 h-5 object-contain" /> },
+                { name: "Confluence", icon: <img src={confluenceIcon} alt="Confluence" className="w-5 h-5 object-contain" /> },
+                { name: "Figma", icon: <img src={figmaIcon} alt="Figma" className="w-5 h-5 object-contain" /> },
+                { name: "GitHub", icon: <img src={githubIcon2} alt="GitHub" className="w-5 h-5 object-contain" /> },
+                { name: "VS Code", icon: <img src={vscodeIcon} alt="VS Code" className="w-5 h-5 object-contain" /> },
+                { name: "Docker", icon: <img src={dockerIcon} alt="Docker" className="w-5 h-5 object-contain" /> },
+                { name: "AWS", icon: <img src={awsIcon} alt="AWS" className="w-5 h-5 object-contain" /> },
+                { name: "Postman", icon: <img src={postmanIcon} alt="Postman" className="w-5 h-5 object-contain" /> },
+                { name: "Slack", icon: <img src={slackIcon} alt="Slack" className="w-5 h-5 object-contain" /> },
+                { name: "Dokploy", icon: <img src={dockployIcon} alt="Dokploy" className="w-5 h-5 object-contain" /> },
+                { name: "Claude", icon: <img src={cloudeIcon} alt="Claude" className="w-5 h-5 object-contain" /> },
+                { name: "Cloudflare", icon: <img src={cloudflareIcon} alt="Cloudflare" className="w-5 h-5 object-contain" /> },
+                { name: "MongoDB", icon: <img src={mongodbIcon} alt="MongoDB" className="w-5 h-5 object-contain" /> },
+                { name: "ClickUp", icon: <img src={clickupIcon} alt="ClickUp" className="w-5 h-5 object-contain" /> },
+                { name: "Agile", icon: <img src={agileIcon} alt="Agile" className="w-5 h-5 object-contain" /> },
+                { name: "Scrum", icon: <img src={scrumIcon} alt="Scrum" className="w-5 h-5 object-contain" /> },
+                { name: "Kanban", icon: <img src={kanbanIcon} alt="Kanban" className="w-5 h-5 object-contain" /> },
+                { name: "Waterfall", icon: <img src={waterfallIcon} alt="Waterfall" className="w-5 h-5 object-contain" /> },
               ].map((tool) => (
                 <div
                   key={tool.name}
