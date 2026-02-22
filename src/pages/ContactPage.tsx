@@ -26,36 +26,6 @@ const ContactInfo = ({ icon: Icon, label, value }: any) => (
     </div>
 );
 
-const FormInput = ({ label, placeholder, type = 'text', required = true }: any) => (
-    <div className="space-y-1.5">
-        <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-            {label} {required && <span className="text-blue-500">*</span>}
-        </label>
-        <input
-            type={type}
-            placeholder={placeholder}
-            className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-sm text-gray-800 placeholder-gray-300"
-        />
-    </div>
-);
-
-const FormSelect = ({ label, options, required = true }: any) => (
-    <div className="space-y-1.5">
-        <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-            {label} {required && <span className="text-blue-500">*</span>}
-        </label>
-        <div className="relative">
-            <select className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-sm text-gray-500 appearance-none pr-10">
-                <option value="">Select...</option>
-                {options.map((opt: string, i: number) => (
-                    <option key={i} value={opt}>{opt}</option>
-                ))}
-            </select>
-            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-300 pointer-events-none" size={16} />
-        </div>
-    </div>
-);
-
 const FAQItem = ({ q, a }: { q: string; a: string }) => {
     const [open, setOpen] = useState(false);
     return (
@@ -88,84 +58,85 @@ export const ContactPage = () => {
                         Let's Work Together
                     </h1>
                 </section>
+                <br /> 
 
-                {/* ── Main Grid: Left info + Right form ── */}
-                <section className="px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-16 items-start">
-
-                        {/* Left Column */}
-                        <div className="space-y-12">
-                            {/* Contact Info */}
-                            <div className="space-y-6">
-                                <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">Get in Touch</h3>
-                                <div className="space-y-5">
-                                    <ContactInfo icon={Mail} label="Email" value="lahirusandeepa22@gmail.com" />
-                                    <ContactInfo icon={Phone} label="Phone" value="+94 71 118 6028" />
-                                    <ContactInfo icon={MapPin} label="Location" value="Sri Lanka (GMT +5:30)" />
-                                    <ContactInfo icon={Clock} label="Response Time" value="Within 24 hours on business days" />
-                                    <ContactInfo icon={CheckCircle} label="Availability" value="Accepting new project inquiries" />
-                                </div>
-                            </div>
-
-                            {/* Prefer to Talk */}
-                            <div className="space-y-4">
-                                <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">Prefer to Talk Directly?</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed">
-                                    Book a 30-minute consultation call to discuss your project goals, scope, and next steps.
-                                </p>
-                                <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                                    <button className="flex-1 bg-blue-600 text-white px-6 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all">
-                                        <PhoneCall size={16} />
-                                        Schedule a Call
-                                    </button>
-                                    <button className="flex-1 bg-white text-gray-800 border border-gray-200 px-6 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all">
-                                        <MessageSquare size={16} className="text-green-500" />
-                                        WhatsApp
-                                    </button>
-                                </div>
-                            </div>
+                {/* ── Main Content: Contact Details only ── */}
+                <section className="px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto">
+                    <div className="space-y-12">
+                        {/* Contact Info */}
+                        <div className="space-y-6">
+                        {/* <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">Get in Touch</h3> */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6">
+                            <ContactInfo icon={Mail} label="Email" value="lahirusandeepa22@gmail.com" />
+                            <ContactInfo icon={Phone} label="Phone" value="+94 71 118 6028" />
+                            {/* <ContactInfo icon={MapPin} label="Location" value="Sri Lanka (GMT +5:30)" /> */}
+                            <ContactInfo icon={Clock} label="Response Time" value="Within 24 hours on business days" />
+                            <ContactInfo icon={CheckCircle} label="Availability" value="Accepting new project inquiries" />
                         </div>
+                    </div>
+                    <br /> <br />
 
-                        {/* Right Column — Form */}
-                        <div className="bg-gray-50 rounded-[32px] p-8 lg:p-10 border border-gray-100">
-                            <div className="space-y-6">
-                                <h3 className="text-xl font-semibold text-gray-900">Send Me a Message</h3>
+                        {/* Prefer to Talk */}
+                        <div className="space-y-4">
+                            {/* <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">Prefer to Talk Directly?</h3>
+                            <p className="text-gray-500 text-sm leading-relaxed">
+                                Book a 30-minute consultation call to discuss your project goals, scope, and next steps.
+                            </p> */}
+                            <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center items-center">
+                                {/* Schedule a Call Button */}
+                                <a
+                                    href="https://cal.com/lahiru-sandeepa-43gdzg"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-fit px-6 py-3.5 bg-blue-600 text-white rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-blue-100"
+                                >
+                                    <PhoneCall size={16} />
+                                    Schedule a Call
+                                </a>
 
-                                <FormInput label="Full Name" placeholder="John Doe" />
-                                <FormInput label="Email Address" placeholder="john@example.com" type="email" />
+                                {/* Call Now Button */}
+                                <a
+                                    href="tel:+94711186028"
+                                    className="w-fit px-6 py-3.5 bg-white text-gray-900 border border-gray-200 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                                >
+                                    <Phone size={16} className="text-blue-600" />
+                                    Call Now
+                                </a>
 
-                                <div className="grid grid-cols-2 gap-4">
-                                    <FormInput label="Phone Number" placeholder="+1 234 567 890" type="tel" required={false} />
-                                    <FormInput label="WhatsApp Number" placeholder="+1 234 567 890" type="tel" required={false} />
-                                </div>
-
-                                <FormInput label="Company Name" placeholder="Your Company Ltd" required={false} />
-
-                                <div className="grid grid-cols-2 gap-4">
-                                    <FormSelect label="Project Type" options={['Web Application', 'Mobile App', 'SaaS', 'Consulting', 'Other']} />
-                                    <FormSelect label="Project Timeline" options={['1–3 Months', '3–6 Months', '6–12 Months', 'Ongoing']} />
-                                </div>
-
-                                <FormSelect
-                                    label="How did you hear about us?"
-                                    options={['Google Search', 'LinkedIn', 'Referral', 'Social Media', 'Other']}
-                                    required={false}
-                                />
-
-                                <div className="space-y-1.5">
-                                    <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                                        Tell us about your project <span className="text-blue-500">*</span>
-                                    </label>
-                                    <textarea
-                                        placeholder="Describe your project, goals, and any specific requirements..."
-                                        className="w-full px-4 py-3 bg-white border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-sm text-gray-800 placeholder-gray-300 h-28 resize-none"
-                                    />
-                                </div>
-
-                                <button className="w-full bg-blue-600 text-white py-4 rounded-full font-bold text-base hover:bg-blue-700 transition-all">
-                                    Send Message
-                                </button>
+                                {/* WhatsApp Button */}
+                                <a
+                                    href="https://wa.me/94711186028"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-fit px-6 py-3.5 bg-white text-gray-800 border border-gray-200 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                                >
+                                    <MessageSquare size={16} className="text-green-500" />
+                                    WhatsApp
+                                </a>
                             </div>
+                            {/* <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                               
+                                <a
+                                    href="https://cal.com/lahiru-sandeepa-43gdzg"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 bg-blue-600 text-white px-6 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all"
+                                >
+                                    <PhoneCall size={16} />
+                                    Schedule a Call
+                                </a>
+
+                              
+                                <a
+                                    href="https://wa.me/94711186028"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 bg-white text-gray-800 border border-gray-200 px-6 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                                >
+                                    <MessageSquare size={16} className="text-green-500" />
+                                    WhatsApp
+                                </a>
+                            </div> */}
                         </div>
                     </div>
                 </section>
@@ -187,18 +158,24 @@ export const ContactPage = () => {
                 </section>
 
                 {/* ── What Happens Next ── */}
-                <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-                    <h2 className="text-4xl font-semibold text-gray-900 text-center mb-16">What Happens Next?</h2>
-                    <div className="space-y-10">
+               <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                    <h2 className="text-4xl font-semibold text-gray-900 text-center mb-16">
+                        What Happens Next?
+                    </h2>
+                    
+                    {/* This inner div is the key: it limits the width and centers itself */}
+                    <div className="max-w-xl mx-auto space-y-10">
                         {[
-                            { step: '01', title: 'You Submit Your Inquiry', desc: 'Review my message and project details.' },
+                            { step: '01', title: 'Consultation Inquiry Received', desc: 'Review your initial details from our direct conversation.' },
                             { step: '02', title: 'Initial Response (Within 24 Hours)', desc: 'Follow-up questions or scheduling a discovery call.' },
                             { step: '03', title: 'Discovery Call', desc: 'We discuss scope, challenges, and goals.' },
                             { step: '04', title: 'Proposal', desc: 'Clear scope, timeline, and pricing structure.' },
                             { step: '05', title: 'Project Kickoff', desc: 'Structured execution with defined milestones and communication plan.' }
                         ].map((item, i) => (
                             <div key={i} className="flex gap-6 group">
-                                <span className="text-sm font-bold text-gray-300 pt-0.5 w-8 shrink-0 group-hover:text-blue-500 transition-colors">{item.step}</span>
+                                <span className="text-sm font-bold text-gray-300 pt-0.5 w-8 shrink-0 group-hover:text-blue-500 transition-colors">
+                                    {item.step}
+                                </span>
                                 <div>
                                     <h3 className="text-base font-semibold text-gray-900">{item.title}</h3>
                                     <p className="text-gray-500 text-sm mt-0.5">{item.desc}</p>
@@ -207,7 +184,6 @@ export const ContactPage = () => {
                         ))}
                     </div>
                 </section>
-
                 {/* ── FAQ ── */}
                 <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
                     <div className="max-w-3xl mx-auto">
@@ -240,25 +216,57 @@ export const ContactPage = () => {
                         </div>
                     </div>
                 </section>
+                <br /> <br />
 
                 {/* ── Bottom CTA ── */}
                 <section className="py-32 px-4 sm:px-6 lg:px-8 text-center bg-white">
                     <div className="max-w-4xl mx-auto space-y-8">
-                        <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 leading-tight">
+                        <h2 className="text-5xl md:text-5xl font-semibold text-gray-900 leading-tight">
                             Looking Forward to Hearing From You.
                         </h2>
                         <p className="text-lg text-gray-500 max-w-2xl mx-auto">
                             Let's build systems that scale, automate intelligently, and deliver measurable impact.
                         </p>
-                        <div className="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+                        <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center items-center">
+                            {/* Schedule a Call Button */}
+                            <a
+                                href="https://cal.com/lahiru-sandeepa-43gdzg"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-fit px-6 py-3.5 bg-blue-600 text-white rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-blue-100"
+                            >
+                                <PhoneCall size={16} />
+                                Schedule a Call
+                            </a>
+
+                            {/* Call Now Button */}
+                            <a
+                                href="tel:+94711186028"
+                                className="w-fit px-6 py-3.5 bg-white text-gray-900 border border-gray-200 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                            >
+                                <Phone size={16} className="text-blue-600" />
+                                Call Now
+                            </a>
+
+                            {/* WhatsApp Button */}
+                            <a
+                                href="https://wa.me/94711186028"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-fit px-6 py-3.5 bg-white text-gray-800 border border-gray-200 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                            >
+                                <MessageSquare size={16} className="text-green-500" />
+                                WhatsApp
+                            </a>
+                        </div>
+                                                {/* <div className="flex flex-col sm:flex-row justify-center gap-4 pt-6">
                             <button className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-base hover:bg-blue-700 transition-colors">
                                 Schedule a Call
                             </button>
                             <button className="bg-white text-gray-900 border border-gray-200 px-10 py-4 rounded-full font-bold text-base hover:bg-gray-50 transition-colors">
                                 Call Now
                             </button>
-                        </div>
-                        <p className="text-xs text-gray-400 mt-2">Or chat on WhatsApp</p>
+                        </div> */}
                     </div>
                 </section>
 

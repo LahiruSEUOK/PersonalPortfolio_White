@@ -8,6 +8,8 @@ import saasPayrollImg from "../assets/SaaSPayroll.svg";
 import cenziosLMSImg from "../assets/cenziosLMS.svg";
 import healthStationImg from "../assets/HealthStation24.svg";
 import learnerByCenziosImg from "../assets/learnerbyCenzios.svg";
+import { motion } from "framer-motion";
+import { buttonPulse } from "../hooks/useAnimations";
 
 const ProjectCard = ({
   title,
@@ -289,9 +291,9 @@ export const ProjectsPage = () => {
             >
               Mobile Applications
             </button>
-            <button className="px-6 py-2 bg-white text-gray-600 border border-gray-200 rounded-full font-bold text-sm hover:border-blue-200">
+            {/* <button className="px-6 py-2 bg-white text-gray-600 border border-gray-200 rounded-full font-bold text-sm hover:border-blue-200">
               Web Sites
-            </button>
+            </button> */}
           </div>
         </section>
 
@@ -312,10 +314,17 @@ export const ProjectsPage = () => {
               Let's discuss your goals and build a structured plan for success.
             </p>
             <div className="pt-8">
-              <button className="bg-[#0073EC] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-3">
-                Schedule a Call
-                <ArrowRight size={20} />
-              </button>
+             <motion.a
+              href="https://cal.com/lahiru-sandeepa-43gdzg" // Your scheduling link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
+              animate={buttonPulse}
+              whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Schedule a Call
+            </motion.a>
             </div>
           </div>
         </section>
