@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { MainLayout } from "../components/MainLayout";
-import { ArrowRight } from "lucide-react";
 
 // Import images from assets
 import flowSuiteImg from "../assets/flowSuite.svg";
@@ -8,15 +7,20 @@ import saasPayrollImg from "../assets/SaaSPayroll.svg";
 import cenziosLMSImg from "../assets/cenziosLMS.svg";
 import healthStationImg from "../assets/HealthStation24.svg";
 import learnerByCenziosImg from "../assets/learnerbyCenzios.svg";
-import { motion } from "framer-motion";
-import { buttonPulse } from "../hooks/useAnimations";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  buttonPulse,
+  fadeInUp,
+  staggerContainer,
+  scaleIn,
+  slideInFromBottom
+} from "../hooks/useAnimations";
 
 const ProjectCard = ({
   title,
   subtitle,
   image,
   meta,
-  challengeTitle,
   challengeDescription,
   challengePoints,
   solution,
@@ -25,17 +29,24 @@ const ProjectCard = ({
   results,
   isMobile,
 }: any) => (
-  <div className="bg-[#F5F5F7] rounded-[32px] p-8 lg:p-20 mb-20 shadow-sm border border-gray-50 overflow-hidden">
+  <motion.div
+    className="bg-[#F5F5F7] rounded-[32px] p-8 lg:p-20 mb-20 shadow-sm border border-gray-50 overflow-hidden"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.1 }}
+    variants={slideInFromBottom}
+  >
     <div className="max-w-4xl mx-auto space-y-16 text-center">
       {/* Title */}
-      <div className="space-y-4">
+      <motion.div className="space-y-4" variants={fadeInUp}>
         <h3 className="text-[48px] font-semibold text-[#333333]">{title}</h3>
         <p className="text-[24px] text-[#8E8E93] font-medium">{subtitle}</p>
-      </div>
+      </motion.div>
 
       {/* Image */}
-      <div
+      <motion.div
         className={`relative group ${isMobile ? "flex justify-center" : ""}`}
+        variants={scaleIn}
       >
         {!isMobile && (
           <div className="absolute inset-0 bg-blue-600/5 blur-3xl rounded-full scale-150 group-hover:bg-blue-600/10 transition-colors" />
@@ -45,23 +56,26 @@ const ProjectCard = ({
           alt={title}
           className={`relative h-auto drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500 ${isMobile ? "max-w-[280px] md:max-w-[320px]" : "w-full"}`}
         />
-      </div>
+      </motion.div>
 
       {/* Meta Row */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-gray-200 text-left">
+      <motion.div
+        className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-gray-200 text-left"
+        variants={staggerContainer}
+      >
         {meta.map((m: any, i: number) => (
-          <div key={i} className="space-y-2">
+          <motion.div key={i} className="space-y-2" variants={fadeInUp}>
             <h4 className="text-[12px] font-semibold text-[#8E8E93] uppercase tracking-widest">
               {m.label}
             </h4>
             <p className="text-[15px] text-[#333333] font-medium">{m.value}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Challenge & Solution + Results */}
       <div className="grid md:grid-cols-2 gap-16 text-left">
-        <div className="space-y-6">
+        <motion.div className="space-y-6" variants={fadeInUp}>
           {/* Challenge */}
           <div className="space-y-3">
             <h4 className="text-[28px] font-bold text-[#333333] uppercase">
@@ -94,10 +108,13 @@ const ProjectCard = ({
               {solution}
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Results */}
-        <div className="space-y-6 bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+        <motion.div
+          className="space-y-6 bg-white p-10 rounded-3xl shadow-sm border border-gray-100"
+          variants={fadeInUp}
+        >
           <div className="space-y-1">
             <h4 className="text-[28px] font-bold text-[#333333]">
               {impactTitle}
@@ -108,18 +125,21 @@ const ProjectCard = ({
               </p>
             )}
           </div>
-          <div className="grid grid-cols-2 gap-8">
+          <motion.div
+            className="grid grid-cols-2 gap-8"
+            variants={staggerContainer}
+          >
             {results.map((res: any, i: number) => (
-              <div key={i} className="space-y-1">
+              <motion.div key={i} className="space-y-1" variants={fadeInUp}>
                 <p className="text-[32px] font-bold text-[#000000]">{res.value}</p>
                 <p className="text-[15px] text-[#8E8E93] font-medium">{res.label}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 export const ProjectsPage = () => {
@@ -267,18 +287,33 @@ export const ProjectsPage = () => {
 
   return (
     <MainLayout>
-      <div className="pt-32 pb-20">
+      <div className="pt-32 pb-20 overflow-hidden">
         {/* Header Section */}
-        <section className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24">
-          <h1 className="text-5xl md:text-6xl font-semibold text-[#333333] mb-6 tracking-tight">
+        <motion.section
+          className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+        >
+          <motion.h1
+            className="text-5xl md:text-6xl font-semibold text-[#333333] mb-6 tracking-tight"
+            variants={fadeInUp}
+          >
             Transforming Complex Operations Into Scalable Digital Systems
-          </h1>
-          <p className="text-[21px] text-[#111111] font-regular max-w-2xl mx-auto">
+          </motion.h1>
+          <motion.p
+            className="text-[21px] text-[#111111] font-regular max-w-2xl mx-auto"
+            variants={fadeInUp}
+          >
             Across manufacturing, HR technology, and education, I've led the
             design and delivery of platforms that unify workflows, automate
             operations, and generate measurable business impact.
-          </p>
-          <div className="flex justify-center gap-4 mt-12">
+          </motion.p>
+          <motion.div
+            className="flex justify-center gap-4 mt-12"
+            variants={fadeInUp}
+          >
             <button
               onClick={() => setActiveTab("web")}
               className={`px-6 py-2 rounded-full font-bold text-sm transition-all ${activeTab === "web" ? "bg-[#0073EC] text-white shadow-lg" : "bg-white text-gray-600 border border-gray-200 hover:border-blue-200"}`}
@@ -291,43 +326,62 @@ export const ProjectsPage = () => {
             >
               Mobile Applications
             </button>
-            {/* <button className="px-6 py-2 bg-white text-gray-600 border border-gray-200 rounded-full font-bold text-sm hover:border-blue-200">
-              Web Sites
-            </button> */}
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
 
         {/* Projects List */}
         <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          {filteredProjects.map((project, i) => (
-            <ProjectCard key={i} {...project} />
-          ))}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              {filteredProjects.map((project, i) => (
+                <ProjectCard key={`${activeTab}-${i}`} {...project} />
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </section>
 
         {/* CTA */}
-        <section className="py-32 px-4 sm:px-6 lg:px-8 text-center">
+        <motion.section
+          className="py-32 px-4 sm:px-6 lg:px-8 text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
           <div className="max-w-4xl mx-auto space-y-12">
-            <h2 className="text-5xl md:text-[48px] font-bold text-[#333333] leading-tight">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-[21px] text-[#6B7280] max-w-2xl mx-auto">
-              Let's discuss your goals and build a structured plan for success.
-            </p>
-            <div className="pt-8">
-             <motion.a
-              href="https://cal.com/lahiru-sandeepa-43gdzg" // Your scheduling link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
-              animate={buttonPulse}
-              whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
-              whileTap={{ scale: 0.95 }}
+            <motion.h2
+              className="text-5xl md:text-[48px] font-bold text-[#333333] leading-tight"
+              variants={fadeInUp}
             >
-              Schedule a Call
-            </motion.a>
-            </div>
+              Ready to Start Your Project?
+            </motion.h2>
+            <motion.p
+              className="text-[21px] text-[#6B7280] max-w-2xl mx-auto"
+              variants={fadeInUp}
+            >
+              Let's discuss your goals and build a structured plan for success.
+            </motion.p>
+            <motion.div className="pt-8" variants={fadeInUp}>
+              <motion.a
+                href="https://cal.com/lahiru-sandeepa-43gdzg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
+                animate={buttonPulse}
+                whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Schedule a Call
+              </motion.a>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
       </div>
     </MainLayout>
   );

@@ -1,20 +1,27 @@
-import React from 'react';
 import { MainLayout } from '../components/MainLayout';
 import {
     CheckCircle2,
-    Handshake,
     MessageSquare,
-    Clock,
     Zap,
-    ShieldCheck,
-    RefreshCw,
-    ArrowRight
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { buttonPulse } from '../hooks/useAnimations';
+import {
+    fadeInUp,
+    fadeInLeft,
+    fadeInRight,
+    staggerContainer,
+    slideInFromBottom,
+    scaleIn,
+    buttonPulse,
+} from '../hooks/useAnimations';
 
 const ProcessStep = ({ number, title, description, keyActivities, deliverables, duration, isLast }: any) => (
-    <div>
+    <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        variants={slideInFromBottom}
+    >
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 py-16">
             {/* Left: Large number */}
             <div className="md:w-32 flex-shrink-0">
@@ -61,7 +68,7 @@ const ProcessStep = ({ number, title, description, keyActivities, deliverables, 
 
         {/* Divider between steps */}
         {!isLast && <div className="border-t border-gray-200" />}
-    </div>
+    </motion.div>
 );
 
 export const ProcessPage = () => {
@@ -186,14 +193,26 @@ export const ProcessPage = () => {
         <MainLayout>
             <div className="pt-32 pb-20">
                 {/* Header */}
-                <section className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24">
-                    <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 tracking-tight">
+                <motion.section
+                    className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={staggerContainer}
+                >
+                    <motion.h1
+                        className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 tracking-tight"
+                        variants={fadeInUp}
+                    >
                         A Structured Yet Flexible Approach to Software Delivery
-                    </h1>
-                    <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">
+                    </motion.h1>
+                    <motion.p
+                        className="text-xl text-gray-500 font-medium max-w-2xl mx-auto"
+                        variants={fadeInUp}
+                    >
                         I follow a strategic, phased approach tailored to project complexity, team size, and organizational culture — balancing structure with adaptability to deliver measurable results.
-                    </p>
-                </section>
+                    </motion.p>
+                </motion.section>
 
                 {/* Steps */}
                 <section className="px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
@@ -205,9 +224,23 @@ export const ProcessPage = () => {
                 {/* Communication Section */}
                 <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-4xl font-semibold text-gray-900 text-center mb-16">Transparent & Structured Communication</h2>
+                        <motion.h2
+                            className="text-4xl font-semibold text-gray-900 text-center mb-16"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeInUp}
+                        >
+                            Transparent & Structured Communication
+                        </motion.h2>
                         <div className="grid md:grid-cols-2 gap-12">
-                            <div className="bg-white p-10 rounded-[32px] shadow-sm space-y-6">
+                            <motion.div
+                                className="bg-white p-10 rounded-[32px] shadow-sm space-y-6"
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.2 }}
+                                variants={fadeInLeft}
+                            >
                                 <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
                                     <MessageSquare className="text-blue-600" size={24} />
                                 </div>
@@ -219,8 +252,14 @@ export const ProcessPage = () => {
                                     <li><span className="font-semibold text-gray-800">Monthly Steering Meetings</span></li>
                                     <li><span className="font-semibold text-gray-800">Ad-hoc updates</span> for critical decisions</li>
                                 </ul>
-                            </div>
-                            <div className="bg-white p-10 rounded-[32px] shadow-sm space-y-6">
+                            </motion.div>
+                            <motion.div
+                                className="bg-white p-10 rounded-[32px] shadow-sm space-y-6"
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.2 }}
+                                variants={fadeInRight}
+                            >
                                 <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
                                     <Zap className="text-blue-600" size={24} />
                                 </div>
@@ -243,7 +282,7 @@ export const ProcessPage = () => {
                                         <p className="font-medium text-gray-800">Figma, GitHub</p>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -251,16 +290,33 @@ export const ProcessPage = () => {
                 {/* Flexible by Design */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 text-center">
                     <div className="max-w-5xl mx-auto">
-
-                        <h2 className="text-5xl font-semibold text-gray-900">
+                        <motion.h2
+                            className="text-5xl font-semibold text-gray-900"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeInUp}
+                        >
                             Flexible by Design
-                        </h2>
+                        </motion.h2>
 
-                        <p className="mt-6 text-xl text-gray-600">
+                        <motion.p
+                            className="mt-6 text-xl text-gray-600"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeInUp}
+                        >
                             I adapt the framework to your organization.
-                        </p>
+                        </motion.p>
 
-                        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <motion.div
+                            className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={staggerContainer}
+                        >
                             {[
                                 {
                                     label: "Waterfall",
@@ -279,9 +335,11 @@ export const ProcessPage = () => {
                                     description: "Optimized digital collaboration workflows.",
                                 },
                             ].map((item, i) => (
-                                <div
+                                <motion.div
                                     key={i}
                                     className="bg-gray-100 rounded-2xl p-8 text-left hover:shadow-md transition"
+                                    variants={scaleIn}
+                                    whileHover={{ y: -4, transition: { duration: 0.2 } }}
                                 >
                                     <h3 className="text-lg font-semibold text-gray-900">
                                         {item.label}
@@ -290,9 +348,9 @@ export const ProcessPage = () => {
                                     <p className="mt-4 text-gray-600 text-sm leading-relaxed">
                                         {item.description}
                                     </p>
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
 
                     </div>
                 </section>
@@ -300,8 +358,22 @@ export const ProcessPage = () => {
                 {/* What You Can Expect */}
                 <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center space-y-12">
-                        <h2 className="text-4xl font-semibold text-gray-900">What You Can Expect</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-left max-w-2xl mx-auto pt-8">
+                        <motion.h2
+                            className="text-4xl font-semibold text-gray-900"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeInUp}
+                        >
+                            What You Can Expect
+                        </motion.h2>
+                        <motion.div
+                            className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-left max-w-2xl mx-auto pt-8"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={staggerContainer}
+                        >
                             {[
                                 'Full transparency',
                                 'Proactive risk management',
@@ -310,39 +382,51 @@ export const ProcessPage = () => {
                                 'Realistic planning',
                                 'Comprehensive docs',
                             ].map((item, i) => (
-                                <div key={i} className="flex items-center gap-3">
+                                <motion.div key={i} className="flex items-center gap-3" variants={fadeInUp}>
                                     <CheckCircle2 className="text-blue-600 shrink-0" size={20} />
                                     <span className="text-gray-700 font-medium">{item}</span>
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
 
                 {/* CTA */}
-                <section className="py-32 px-4 sm:px-6 lg:px-8 text-center">
+                <motion.section
+                    className="py-32 px-4 sm:px-6 lg:px-8 text-center"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={staggerContainer}
+                >
                     <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 leading-tight">
+                        <motion.h2
+                            className="text-5xl md:text-6xl font-semibold text-gray-900 leading-tight"
+                            variants={fadeInUp}
+                        >
                             Ready to Start Your Project?
-                        </h2>
-                        <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                        </motion.h2>
+                        <motion.p
+                            className="text-xl text-gray-500 max-w-2xl mx-auto"
+                            variants={fadeInUp}
+                        >
                             Let's discuss your goals and build a structured plan for success.
-                        </p>
-                        <div className="pt-8">
+                        </motion.p>
+                        <motion.div className="pt-8" variants={fadeInUp}>
                             <motion.a
-                                href="https://cal.com/lahiru-sandeepa-43gdzg" // Your scheduling link
+                                href="https://cal.com/lahiru-sandeepa-43gdzg"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
                                 animate={buttonPulse}
                                 whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
                                 whileTap={{ scale: 0.95 }}
-                                >
+                            >
                                 Schedule a Call
-                                </motion.a>
-                        </div>
+                            </motion.a>
+                        </motion.div>
                     </div>
-                </section>
+                </motion.section>
             </div>
         </MainLayout>
     );

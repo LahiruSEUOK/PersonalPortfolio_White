@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MainLayout } from '../components/MainLayout';
 import {
     Mail,
     Phone,
     Linkedin,
-    MapPin,
     Clock,
     PhoneCall,
     MessageSquare,
@@ -13,17 +12,27 @@ import {
     ChevronUp,
     Globe
 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+    fadeInUp,
+    staggerContainer,
+    buttonPulse,
+    scaleIn
+} from '../hooks/useAnimations';
 
 const ContactInfo = ({ icon: Icon, label, value }: any) => (
-    <div className="flex items-start gap-4">
-        <div className="w-9 h-9 bg-gray-100 rounded-xl flex items-center justify-center shrink-0">
+    <motion.div className="flex items-start gap-4" variants={fadeInUp}>
+        <motion.div
+            className="w-9 h-9 bg-gray-100 rounded-xl flex items-center justify-center shrink-0"
+            variants={scaleIn}
+        >
             <Icon className="text-gray-500" size={16} />
-        </div>
+        </motion.div>
         <div>
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-0.5">{label}</p>
             <p className="text-gray-800 font-medium text-sm">{value}</p>
         </div>
-    </div>
+    </motion.div>
 );
 
 const FAQItem = ({ q, a }: { q: string; a: string }) => {
@@ -40,9 +49,19 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
                     : <ChevronDown className="text-gray-300 shrink-0" size={18} />
                 }
             </div>
-            {open && (
-                <p className="text-gray-500 text-sm leading-relaxed pb-5 -mt-1">{a}</p>
-            )}
+            <AnimatePresence>
+                {open && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                    >
+                        <p className="text-gray-500 text-sm leading-relaxed pb-5 -mt-1">{a}</p>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };
@@ -50,99 +69,100 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
 export const ContactPage = () => {
     return (
         <MainLayout>
-            <div className="pt-32 pb-20">
+            <div className="pt-32 pb-20 overflow-hidden">
 
                 {/* ── Hero Title ── */}
-                <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center mb-16">
-                    <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 tracking-tight">
+                <motion.section
+                    className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center mb-16"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={staggerContainer}
+                >
+                    <motion.h1
+                        className="text-5xl md:text-6xl font-semibold text-gray-900 tracking-tight"
+                        variants={fadeInUp}
+                    >
                         Let's Work Together
-                    </h1>
-                </section>
-                <br /> 
+                    </motion.h1>
+                </motion.section>
+                <br />
 
                 {/* ── Main Content: Contact Details only ── */}
                 <section className="px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto">
-                    <div className="space-y-12">
+                    <motion.div
+                        className="space-y-12"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={staggerContainer}
+                    >
                         {/* Contact Info */}
                         <div className="space-y-6">
-                        {/* <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">Get in Touch</h3> */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6">
-                            <ContactInfo icon={Mail} label="Email" value="lahirusandeepa22@gmail.com" />
-                            <ContactInfo icon={Phone} label="Phone" value="+94 71 118 6028" />
-                            {/* <ContactInfo icon={MapPin} label="Location" value="Sri Lanka (GMT +5:30)" /> */}
-                            <ContactInfo icon={Clock} label="Response Time" value="Within 24 hours on business days" />
-                            <ContactInfo icon={CheckCircle} label="Availability" value="Accepting new project inquiries" />
+                            <motion.div
+                                className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6"
+                                variants={staggerContainer}
+                            >
+                                <ContactInfo icon={Mail} label="Email" value="lahirusandeepa22@gmail.com" />
+                                <ContactInfo icon={Phone} label="Phone" value="+94 71 118 6028" />
+                                <ContactInfo icon={Clock} label="Response Time" value="Within 24 hours on business days" />
+                                <ContactInfo icon={CheckCircle} label="Availability" value="Accepting new project inquiries" />
+                            </motion.div>
                         </div>
-                    </div>
-                    <br /> <br />
+                        <br /> <br />
 
                         {/* Prefer to Talk */}
-                        <div className="space-y-4">
-                            {/* <h3 className="text-xs font-bold text-gray-900 uppercase tracking-widest">Prefer to Talk Directly?</h3>
-                            <p className="text-gray-500 text-sm leading-relaxed">
-                                Book a 30-minute consultation call to discuss your project goals, scope, and next steps.
-                            </p> */}
+                        <motion.div className="space-y-4" variants={fadeInUp}>
                             <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center items-center">
                                 {/* Schedule a Call Button */}
-                                <a
+                                <motion.a
                                     href="https://cal.com/lahiru-sandeepa-43gdzg"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-fit px-6 py-3.5 bg-blue-600 text-white rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-blue-100"
+                                    animate={buttonPulse}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
                                 >
                                     <PhoneCall size={16} />
                                     Schedule a Call
-                                </a>
+                                </motion.a>
 
                                 {/* Call Now Button */}
-                                <a
+                                <motion.a
                                     href="tel:+94711186028"
                                     className="w-fit px-6 py-3.5 bg-white text-gray-900 border border-gray-200 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
                                 >
                                     <Phone size={16} className="text-blue-600" />
                                     Call Now
-                                </a>
+                                </motion.a>
 
                                 {/* WhatsApp Button */}
-                                <a
+                                <motion.a
                                     href="https://wa.me/94711186028"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-fit px-6 py-3.5 bg-white text-gray-800 border border-gray-200 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
                                 >
                                     <MessageSquare size={16} className="text-green-500" />
                                     WhatsApp
-                                </a>
+                                </motion.a>
                             </div>
-                            {/* <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                               
-                                <a
-                                    href="https://cal.com/lahiru-sandeepa-43gdzg"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex-1 bg-blue-600 text-white px-6 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all"
-                                >
-                                    <PhoneCall size={16} />
-                                    Schedule a Call
-                                </a>
-
-                              
-                                <a
-                                    href="https://wa.me/94711186028"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex-1 bg-white text-gray-800 border border-gray-200 px-6 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
-                                >
-                                    <MessageSquare size={16} className="text-green-500" />
-                                    WhatsApp
-                                </a>
-                            </div> */}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </section>
 
                 {/* ── Social Links Bar ── */}
-                <section className="mt-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+                <motion.section
+                    className="mt-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
                     <div className="flex flex-wrap justify-center gap-8 py-8 border-t border-b border-gray-100">
                         <a href="https://linkedin.com/in/lahiru-sandeepa" target="_blank" rel="noreferrer"
                             className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors">
@@ -155,16 +175,26 @@ export const ContactPage = () => {
                             lahirusandeepa.online
                         </a>
                     </div>
-                </section>
+                </motion.section>
 
                 {/* ── What Happens Next ── */}
-               <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-semibold text-gray-900 text-center mb-16">
+                <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                    <motion.h2
+                        className="text-4xl font-semibold text-gray-900 text-center mb-16"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
                         What Happens Next?
-                    </h2>
-                    
-                    {/* This inner div is the key: it limits the width and centers itself */}
-                    <div className="max-w-xl mx-auto space-y-10">
+                    </motion.h2>
+
+                    <motion.div
+                        className="max-w-xl mx-auto space-y-10"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={staggerContainer}
+                    >
                         {[
                             { step: '01', title: 'Consultation Inquiry Received', desc: 'Review your initial details from our direct conversation.' },
                             { step: '02', title: 'Initial Response (Within 24 Hours)', desc: 'Follow-up questions or scheduling a discovery call.' },
@@ -172,7 +202,7 @@ export const ContactPage = () => {
                             { step: '04', title: 'Proposal', desc: 'Clear scope, timeline, and pricing structure.' },
                             { step: '05', title: 'Project Kickoff', desc: 'Structured execution with defined milestones and communication plan.' }
                         ].map((item, i) => (
-                            <div key={i} className="flex gap-6 group">
+                            <motion.div key={i} className="flex gap-6 group" variants={fadeInUp}>
                                 <span className="text-sm font-bold text-gray-300 pt-0.5 w-8 shrink-0 group-hover:text-blue-500 transition-colors">
                                     {item.step}
                                 </span>
@@ -180,15 +210,29 @@ export const ContactPage = () => {
                                     <h3 className="text-base font-semibold text-gray-900">{item.title}</h3>
                                     <p className="text-gray-500 text-sm mt-0.5">{item.desc}</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </section>
+
                 {/* ── FAQ ── */}
                 <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
                     <div className="max-w-3xl mx-auto">
-                        <h2 className="text-4xl font-semibold text-gray-900 text-center mb-12">Quick Answers</h2>
-                        <div className="bg-white rounded-[32px] px-8 py-4 border border-gray-100">
+                        <motion.h2
+                            className="text-4xl font-semibold text-gray-900 text-center mb-12"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                        >
+                            Quick Answers
+                        </motion.h2>
+                        <motion.div
+                            className="bg-white rounded-[32px] px-8 py-4 border border-gray-100"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={staggerContainer}
+                        >
                             {[
                                 {
                                     q: 'What is your typical project timeline?',
@@ -211,64 +255,80 @@ export const ContactPage = () => {
                                     a: 'Yes, I offer post-launch support packages covering monitoring, bug fixes, and feature iterations.'
                                 }
                             ].map((faq, i) => (
-                                <FAQItem key={i} q={faq.q} a={faq.a} />
+                                <motion.div key={i} variants={fadeInUp}>
+                                    <FAQItem q={faq.q} a={faq.a} />
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
                 <br /> <br />
 
                 {/* ── Bottom CTA ── */}
-                <section className="py-32 px-4 sm:px-6 lg:px-8 text-center bg-white">
+                <motion.section
+                    className="py-32 px-4 sm:px-6 lg:px-8 text-center bg-white"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={staggerContainer}
+                >
                     <div className="max-w-4xl mx-auto space-y-8">
-                        <h2 className="text-5xl md:text-5xl font-semibold text-gray-900 leading-tight">
+                        <motion.h2
+                            className="text-5xl md:text-5xl font-semibold text-gray-900 leading-tight"
+                            variants={fadeInUp}
+                        >
                             Looking Forward to Hearing From You.
-                        </h2>
-                        <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+                        </motion.h2>
+                        <motion.p
+                            className="text-lg text-gray-500 max-w-2xl mx-auto"
+                            variants={fadeInUp}
+                        >
                             Let's build systems that scale, automate intelligently, and deliver measurable impact.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center items-center">
+                        </motion.p>
+                        <motion.div
+                            className="flex flex-col sm:flex-row gap-3 pt-4 justify-center items-center"
+                            variants={fadeInUp}
+                        >
                             {/* Schedule a Call Button */}
-                            <a
+                            <motion.a
                                 href="https://cal.com/lahiru-sandeepa-43gdzg"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-fit px-6 py-3.5 bg-blue-600 text-white rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-blue-100"
+                                animate={buttonPulse}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <PhoneCall size={16} />
                                 Schedule a Call
-                            </a>
+                            </motion.a>
 
                             {/* Call Now Button */}
-                            <a
+                            <motion.a
                                 href="tel:+94711186028"
                                 className="w-fit px-6 py-3.5 bg-white text-gray-900 border border-gray-200 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <Phone size={16} className="text-blue-600" />
                                 Call Now
-                            </a>
+                            </motion.a>
 
                             {/* WhatsApp Button */}
-                            <a
+                            <motion.a
                                 href="https://wa.me/94711186028"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-fit px-6 py-3.5 bg-white text-gray-800 border border-gray-200 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-all"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <MessageSquare size={16} className="text-green-500" />
                                 WhatsApp
-                            </a>
-                        </div>
-                                                {/* <div className="flex flex-col sm:flex-row justify-center gap-4 pt-6">
-                            <button className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-base hover:bg-blue-700 transition-colors">
-                                Schedule a Call
-                            </button>
-                            <button className="bg-white text-gray-900 border border-gray-200 px-10 py-4 rounded-full font-bold text-base hover:bg-gray-50 transition-colors">
-                                Call Now
-                            </button>
-                        </div> */}
+                            </motion.a>
+                        </motion.div>
                     </div>
-                </section>
+                </motion.section>
 
             </div>
         </MainLayout>
