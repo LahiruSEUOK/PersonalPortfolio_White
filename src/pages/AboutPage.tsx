@@ -8,18 +8,27 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-import {
-  FaJira,
-  FaFigma,
-  FaGithub,
-  FaDocker,
-  FaAws,
-  FaSlack,
-  FaTrello,
-} from "react-icons/fa";
-import { SiConfluence, SiNotion, SiPostman, SiTableau } from "react-icons/si";
+// Additional local asset imports
+import confluenceIcon from "../assets/confluence.png";
+import dockerIcon from "../assets/docker.png";
+import awsIcon from "../assets/aws.png";
+import githubIcon2 from "../assets/github.png";
+import dockployIcon from "../assets/dockploy.svg";
+import cloudeIcon from "../assets/cloude.svg";
+import cloudflareIcon from "../assets/cloudflare.svg";
+import mongodbIcon from "../assets/mongodb.png";
+import clickupIcon from "../assets/clickup.svg";
+import agileIcon from "../assets/agile.png";
+import scrumIcon from "../assets/scrum.png";
+import kanbanIcon from "../assets/kanban.png";
+import waterfallIcon from "../assets/waterfall.png";
 
-import { VscVscode } from "react-icons/vsc";
+// Local asset imports
+import jiraIcon from "../assets/jira.svg";
+import figmaIcon from "../assets/figma.svg";
+import vscodeIcon from "../assets/vscode.svg";
+import slackIcon from "../assets/slck.svg";
+import postmanIcon from "../assets/postman-inc-48.png";
 
 export const AboutPage = () => {
   return (
