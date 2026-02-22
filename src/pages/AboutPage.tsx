@@ -43,28 +43,23 @@ export const AboutPage = () => {
             Project Manager | Business Analyst | Solution Designer
           </p>
           <p className="text-lg text-[#111111] leading-relaxed max-w-2xl mx-auto">
-            Over 7+ years in the software industry, I specialize in transforming
-            complex business requirements into elegant, scalable solutions.
-            Passionate about professional growth, driving innovation and
-            delivering high-impact business value.
+           Based in Sri Lanka, I transform complex business challenges into elegant, 
+           scalable software solutions. With 7+ years of professional experience and 3+ years in project management, 
+           I’ve led cross- functional teams delivering enterprise systems, SaaS platforms, and custom web applications.
           </p>
         </section>
 
         {/* Who I Am Section */}
         <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <h2 className="text-6xl font-semibold text-[#333333]">Who I Am</h2>
+            <h2 className="text-6xl font-semibold text-[#333333]">What I Do</h2>
             <div className="space-y-6">
               <p className="text-lg text-[#111111] leading-relaxed">
-                As a project manager and technical lead, I bridge the gap
-                between business vision and technical implementation. My
-                approach is centered on clear communication, strategic planning,
-                and a deep understanding of the software development lifecycle.
+                I bridge the gap between business strategy and technical execution.
               </p>
               <p className="text-lg text-[#111111] leading-relaxed">
-                I believe that successful projects are built on strong
-                foundations of trust, collaboration, and a relentless focus on
-                solving the right problems for the users.
+                With a background in financial services and a B.Sc. (Hons) in Software Engineering from the University of Kelaniya, 
+                I combine business insight with strong technical understanding to design solutions that are practical, scalable, and impactful.
               </p>
             </div>
           </div>
@@ -86,17 +81,17 @@ export const AboutPage = () => {
               {[
                 {
                   title: "The Foundation",
-                  desc: "Started as a software engineer, gaining deep technical insights and a love for building products.",
+                  desc: "Began career as Executive Wealth Planner at AIA Insurance, mastering needs analysis and client- focused solution design. Later led IT modernization initiatives and operational strategy at Our Nation Pvt Ltd.",
                   icon: <Landmark className="text-[#111111]" size={24} />,
                 },
                 {
                   title: "The Transition",
-                  desc: "Evolved into leadership roles, focusing on project management and business strategy.",
+                  desc: "Transitioned fully into project management and business analysis in software development. Focused on bridging the communication gap between stakeholders and engineering teams.",
                   icon: <Workflow className="text-[#111111]" size={24} />,
                 },
                 {
                   title: "Current Impact",
-                  desc: "Now leading large-scale enterprise solutions and mentoring the next generation of talent.",
+                  desc: "Currently Project Manager & Business Analyst at Cenzios Pvt Ltd, leading multiple web and SaaS products while pursuing an MBA in Project Management from Cardiff Metropolitan University.",
                   icon: <TrendingUp className="text-[#111111]" size={24} />,
                 },
               ].map((item, i) => (
@@ -126,9 +121,12 @@ export const AboutPage = () => {
               Turning ambiguity into clarity.
             </h2>
             <p className="mt-8 text-xl text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
-              I thrive on taking complex, undefined challenges and breaking them
-              down into structured, executable plans that deliver real-world
-              impact and drive sustainable business growth.
+              I’m driven by the challenge of transforming complex, ambiguous business problems into clear, practical, and scalable solutions. I find deep satisfaction in 
+              bringing structure to uncertainty and turning ideas into systems that truly work.
+              <br />
+              <br />
+              For me, success isn’t just about delivery, it’s about meaningful impact. 
+              Whether it’s streamlining operations, improving efficiency, accelerating workflows, or making daily work easier for end users, I’m motivated by solutions that create lasting value and measurable progress.
             </p>
           </div>
         </section>
@@ -143,17 +141,17 @@ export const AboutPage = () => {
               {[
                 {
                   title: "Clear Communication",
-                  desc: "Ensuring all stakeholders are aligned and informed throughout the project lifecycle.",
+                  desc: "Keeping stakeholders aligned at every stage, ensuring transparency and managing expectations effectively.",
                   icon: <MessageSquare className="text-[#111111]" size={24} />,
                 },
                 {
                   title: "Technical Excellence",
-                  desc: "Using metrics and analysis to guide strategy and optimize outcomes.",
+                  desc: "Designing scalable, maintainable, and user-friendly systems that stand the test of time and scale.",
                   icon: <Layers className="text-[#111111]" size={24} />,
                 },
                 {
                   title: "Agile Adaptability",
-                  desc: "Embracing change and iterating quickly to deliver value in dynamic environments.",
+                  desc: "Responding to change while protecting delivery momentum. Pragmatic application of Agile methodologies.",
                   icon: <RefreshCw className="text-[#111111]" size={24} />,
                 },
               ].map((item, i) => (
@@ -174,9 +172,9 @@ export const AboutPage = () => {
         </section>
 
         {/* Expertise & Skills */}
-        <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
-            <div>
+        {/* <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20"> */}
+            {/* <div>
               <h2 className="text-[32px] font-semibold text-[#1D1D1F] mb-12">
                 Core Expertise
               </h2>
@@ -203,37 +201,42 @@ export const AboutPage = () => {
                   </div>
                 ))}
               </div>
-            </div>
-            <div>
-              <h2 className="text-[32px] font-semibold text-[#1D1D1F] mb-12">
-                Technical Skills
-              </h2>
-              <div className="space-y-8">
-                {[
-                  {
-                    title: "Full Stack Development",
-                    desc: "React, Node.js, TypeScript, PostgreSQL.",
-                  },
-                  {
-                    title: "Cloud Infrastructure",
-                    desc: "AWS, Azure, Docker, Kubernetes.",
-                  },
-                  {
-                    title: "Data Analytics",
-                    desc: "Python, PowerBI, SQL, Tableau.",
-                  },
-                ].map((item, i) => (
-                  <div key={i}>
-                    <h4 className="text-[19px] font-semibold text-[#1D1D1F] mb-2">
-                      {item.title}
-                    </h4>
-                    <p className="text-[15px] text-[#86868B]">{item.desc}</p>
-                  </div>
-                ))}
+            </div> */}
+                <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-[32px] font-semibold text-[#1D1D1F] mb-12">
+            Core Expertise
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              {
+                title: "Project Management",
+                desc: "Agile, Scrum, Kanban, Waterfall methodologies, risk management and mitigation, budget and resource allocation, stakeholder management and communication, sprint planning and facilitation.",
+              },
+              {
+                title: "Business Analysis",
+                desc: "Requirements gathering and documentation, stakeholder engagement and collaboration, process mapping and optimization, user story development, gap analysis.",
+              },
+              {
+                title: "Solution Design",
+                desc: "Workflow and process design, technical feasibility assessment, UI/UX collaboration, scalability planning, solution architecture.",
+              },
+              {
+                title: "Technical Skills",
+                desc: "API testing, server and environment management, release management, QA testing and test case development, product roadmapping.",
+              },
+            ].map((item, i) => (
+              <div key={i}>
+                <h4 className="text-[19px] font-semibold text-[#1D1D1F] mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-[15px] text-[#86868B]">{item.desc}</p>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Tools & Technologies */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 text-center">
@@ -244,24 +247,18 @@ export const AboutPage = () => {
 
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { name: "Jira", icon: <img src={jiraIcon} alt="Jira" className="w-5 h-5 object-contain" /> },
-                { name: "Confluence", icon: <img src={confluenceIcon} alt="Confluence" className="w-5 h-5 object-contain" /> },
-                { name: "Figma", icon: <img src={figmaIcon} alt="Figma" className="w-5 h-5 object-contain" /> },
-                { name: "GitHub", icon: <img src={githubIcon2} alt="GitHub" className="w-5 h-5 object-contain" /> },
-                { name: "VS Code", icon: <img src={vscodeIcon} alt="VS Code" className="w-5 h-5 object-contain" /> },
-                { name: "Docker", icon: <img src={dockerIcon} alt="Docker" className="w-5 h-5 object-contain" /> },
-                { name: "AWS", icon: <img src={awsIcon} alt="AWS" className="w-5 h-5 object-contain" /> },
-                { name: "Postman", icon: <img src={postmanIcon} alt="Postman" className="w-5 h-5 object-contain" /> },
-                { name: "Slack", icon: <img src={slackIcon} alt="Slack" className="w-5 h-5 object-contain" /> },
-                { name: "Dokploy", icon: <img src={dockployIcon} alt="Dokploy" className="w-5 h-5 object-contain" /> },
-                { name: "Claude", icon: <img src={cloudeIcon} alt="Claude" className="w-5 h-5 object-contain" /> },
-                { name: "Cloudflare", icon: <img src={cloudflareIcon} alt="Cloudflare" className="w-5 h-5 object-contain" /> },
-                { name: "MongoDB", icon: <img src={mongodbIcon} alt="MongoDB" className="w-5 h-5 object-contain" /> },
-                { name: "ClickUp", icon: <img src={clickupIcon} alt="ClickUp" className="w-5 h-5 object-contain" /> },
-                { name: "Agile", icon: <img src={agileIcon} alt="Agile" className="w-5 h-5 object-contain" /> },
-                { name: "Scrum", icon: <img src={scrumIcon} alt="Scrum" className="w-5 h-5 object-contain" /> },
-                { name: "Kanban", icon: <img src={kanbanIcon} alt="Kanban" className="w-5 h-5 object-contain" /> },
-                { name: "Waterfall", icon: <img src={waterfallIcon} alt="Waterfall" className="w-5 h-5 object-contain" /> },
+                { name: "Jira", icon: <FaJira color="#2684FF" /> },
+                // { name: "Confluence", icon: <SiConfluence color="#172B4D" /> },
+                { name: "Figma", icon: <FaFigma color="#F24E1E" /> },
+                { name: "GitHub", icon: <FaGithub color="#181717" /> },
+                { name: "VS Code", icon: <VscVscode color="#007ACC" /> },
+                { name: "Docker", icon: <FaDocker color="#2496ED" /> },
+                // { name: "AWS", icon: <FaAws color="#FF9900" /> },
+                { name: "Postman", icon: <SiPostman color="#FF6C37" /> },
+                // { name: "Tableau", icon: <SiTableau color="#E97627" /> },
+                { name: "Slack", icon: <FaSlack color="#4A154B" /> },
+                { name: "Trello", icon: <FaTrello color="#0052CC" /> },
+                // { name: "Notion", icon: <SiNotion color="#000000" /> },
               ].map((tool) => (
                 <div
                   key={tool.name}
@@ -306,17 +303,28 @@ export const AboutPage = () => {
               <div className="space-y-8">
                 <div>
                   <h4 className="text-lg font-semibold text-[#111111] mb-1">
-                    PMP® Certification
+                    {/* PMP® Certification */}
                   </h4>
                   <p className="text-[#6B6B6B] mb-2">
-                    Project Management Institute
+                    Agile Scrum Master
                   </p>
+                  <p className="text-[#6B6B6B] mb-2">
+                    Disciplined Agile
+                  </p>
+                  <p className="text-[#6B6B6B] mb-2">
+                    PRINCE2 Preparation
+                  </p>
+                   <p className="text-[#6B6B6B] mb-2">
+                    Generative AI for Project Managers
+                  </p>
+                   
+                  
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-[#111111] mb-1">
-                    AWS Solution Architect
+                    {/* AWS Solution Architect */}
                   </h4>
-                  <p className="text-[#6B6B6B]">Amazon Web Services</p>
+                  {/* <p className="text-[#6B6B6B]">Amazon Web Services</p> */}
                 </div>
               </div>
             </div>
@@ -324,7 +332,7 @@ export const AboutPage = () => {
         </section>
 
         {/* Career Timeline */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
+        {/* <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-semibold text-gray-900 mb-16 text-center">
               Career Timeline
@@ -366,18 +374,171 @@ export const AboutPage = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-4xl font-semibold text-gray-900 mb-16 text-center">
+      Career Timeline
+    </h2>
+    <div className="relative border-l border-gray-200 ml-4 md:ml-0">
+      {[
+        {
+          role: "Project Manager",
+          company: "Cenzios · Full-time",
+          period: "Mar 2025 - Present · 1 yr",
+         
+          desc: [
+            "Lead multiple software projects from initiation to delivery, ensuring timelines, budgets, and quality standards were met",
+            "Coordinates cross-functional teams of 8–12 developers, designers, and QA engineers to drive effective collaboration",
+            "Gather and analyze business requirements, translating them into actionable technical solutions aligned with client goals",
+            "Apply Agile, Waterfall, and hybrid methodologies to streamline project execution and delivery",
+            "Maintain clear communication with stakeholders, ensuring alignment across clients, technical teams, and internal leadership",
+            "Deliver solutions that enhanced operational efficiency and supported client objectives",
+          ],
+        
+        },
+        {
+          role: "Associate Project Manager",
+          company: "Aventure · Full-time",
+          period: "Oct 2024 - Mar 2025 · 6 mos",
+         
+          desc: [
+            "Led project planning and execution for various client projects",
+            "Coordinated with stakeholders to define project scope, objectives, and timelines",
+            "Managed resource allocation and ensured optimal team performance",
+            "Conducted risk management and financial planning to ensure smooth project execution",
+            "Supervised workload distribution and tracked project progress using tools like JIRA",
+            "Ensured compliance with project deadlines and budgets",
+            "Facilitated communication between teams and clients for timely updates and feedback",
+            "Provided regular status reports and presented project updates to senior management",
+            "Ensured the delivery of high-quality solutions aligned with client needs and expectations",
+          ],
+        },
+        {
+          role: "Business Development Manager",
+          company: "Our Nation PVT Ltd · Self-employed",
+          period: "Oct 2022 - Oct 2024 · 2 yrs 1 mo",
+         
+          desc: [
+            "Managed operations of 4 restaurant locations and 1 grocery shop with 25+ staff",
+            "Implemented IT modernization, including POS systems and workflow automation",
+            "Led budgeting, financial planning, procurement, payroll, and compliance management",
+            "Introduced operational improvements to increase efficiency and customer satisfaction",
+          ],
+          achievements: [
+            "Optimized team allocation and resource planning, improving operational performance",
+            "Expanded business reach through strategic planning and stakeholder engagement",
+          ],
+         
+        },
+        {
+          role: "President",
+          company: "Software Engineering Students' Association - University of Kelaniya · Full-time",
+          period: "Jul 2022 - Jul 2023 · 1 yr 1 mo",
+          
+          desc: [
+            "Cultivated effective leadership and teamwork skills",
+            "Organized largest 24-hour coding inter-university hackathon physically at the university",
+            "Expanded network, built relationships, planned events, fundraised, and motivated four undergraduate batches",
+          ],
+         
+        },
+        {
+          role: "Committee Member",
+          company: "Software Engineering Students' Association - University of Kelaniya",
+          period: "Jul 2021 - Jul 2022 · 1 yr 1 mo",
+         
+          desc: [
+            "Presented suggestions and ideas about SESA events & degree-related matters during meetings",
+          ],
+          
+        },
+        {
+          role: "Junior Treasurer",
+          company: "Software Engineering Students' Association - University of Kelaniya · Full-time",
+          period: "Jul 2020 - Jul 2021 · 1 yr 1 mo",
+          
+          desc: [
+            "Responsible for all financial activities carried out by SESA",
+            "Managed key events: Realhack, JuniorHack, Inceptio, CSR Projects, Webinars, Seminars",
+          ],
+        
+        },
+        {
+          role: "Business Analyst Intern",
+          company: "ELZIAN AGRO · Internship",
+          period: "Sep 2021 - Feb 2022 · 6 mos",
+         
+          desc: [
+            "Maintained good relationships with stakeholders",
+            "Managed communications and scheduled meetings",
+            "Requirement elicitation and documentation",
+            "Assisted in recruitment and selection processes",
+            "Supported organizational activities like site visits, customer awareness programs, and event planning",
+            "Collected and analyzed client requirements and converted them into actionable insights",
+          ],
+         
+        },
+        {
+          role: "Sales Manager",
+          company: "AIA Sri Lanka · Part-time",
+          period: "Feb 2019 - Sep 2021 · 2 yrs 8 mos",
+          
+          desc: [
+            "Gained leadership, recruiting, teamwork, mentoring, and employee training skills",
+          ],
+         
+        },
+        {
+          role: "Sales Executive",
+          company: "AIA Sri Lanka",
+          period: "Apr 2018 - Feb 2019 · 11 mos",
+          
+          desc: [
+            "Gained skills in sales, marketing, communication, lead generation, strategic planning, requirement analysis, corporate relationships, convincing, leadership, mentoring, and meeting deadlines",
+          ],
+         
+        },
+      ].map((job, i) => (
+        <div key={i} className="mb-12 ml-8 relative">
+          <span className="absolute -left-[41px] top-1 w-4 h-4 bg-[#2B7BE9] rounded-full border-4 border-white shadow-sm" />
+          <span className="text-[14px] font-bold text-[#2B7BE9] mb-1 block">
+            {job.period}
+          </span>
+          <h3 className="text-[24px] font-semibold text-[#1D1D1F]">
+            {job.role}
+          </h3>
+          <p className="text-[18px] text-[#1D1D1F] font-medium mb-2">
+            {job.company}
+          </p>
+    
+          {job.desc && (
+            <ul className="list-disc ml-5 text-[#86868B] text-[16px] leading-relaxed mb-2">
+              {job.desc.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
+          )}
+          {job.achievements && (
+            <ul className="list-disc ml-5 text-[#86868B] text-[16px] leading-relaxed">
+              {job.achievements.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* Beyond Work Section */}
         <section className="py-24 bg-[#171717] text-white px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-[32px] text-[#FFFFFF] font-semibold mb-8">Beyond Work</h2>
             <p className="text-[18px] text-[#F2F2F2] font-regular leading-relaxed mb-12 max-w-2xl mx-auto">
-              When I'm not managing projects, I enjoy contributing to
-              open-source software, mentoring aspiring tech professionals, and
-              exploring the latest trends in AI and machine learning. I believe
-              in giving back to the community and continually expanding my
-              horizons.
+             When I'm not optimizing workflows, I explore the landscapes of Sri Lanka through photography and mentoring young tech enthusiasts, 
+             believing that balance is the key to sustained creativity.
             </p>
           </div>
         </section>

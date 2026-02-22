@@ -1,4 +1,4 @@
-import about from '../assets/BridgingStrategy.svg';
+import about from '../assets/BridgingStrategy.png';
 import { motion } from 'framer-motion';
 import {
   fadeInLeft,
