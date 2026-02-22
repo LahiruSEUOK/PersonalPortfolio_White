@@ -1,26 +1,25 @@
 import React from 'react';
 import { MainLayout } from '../components/MainLayout';
 import {
-    Briefcase,
-    BarChart3,
     Zap,
-    Code,
-    RefreshCw,
     Search,
     PenTool,
-    Play,
     CheckCircle,
-    ArrowRight,
     Wrench,
     Rocket,
     BarChart,
     FileText,
     Layers,
     Package
-    
+
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { buttonPulse } from '../hooks/useAnimations';
+import {
+    fadeInUp,
+    staggerContainer,
+    slideInFromBottom,
+    buttonPulse,
+} from '../hooks/useAnimations';
 
 interface SubSection {
     label: string;
@@ -43,7 +42,13 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon: Icon, title, description, benefits, right }: ServiceCardProps) => (
-    <div className="bg-gray-100 rounded-[32px] p-8 lg:p-12 mb-12 shadow-sm border border-gray-50">
+    <motion.div
+        className="bg-gray-100 rounded-[32px] p-8 lg:p-12 mb-12 shadow-sm border border-gray-50"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        variants={slideInFromBottom}
+    >
         {/* Top: Icon + Title + Description — full width */}
         <div className="mb-10">
             <div className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center shadow-sm mb-6">
@@ -104,7 +109,7 @@ const ServiceCard = ({ icon: Icon, title, description, benefits, right }: Servic
                 ))}
             </div>
         </div>
-    </div>
+    </motion.div>
 );
 
 export const ServicesPage = () => {
@@ -203,14 +208,26 @@ export const ServicesPage = () => {
         <MainLayout>
             <div className="pt-32 pb-20">
                 {/* Header Section */}
-                <section className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24">
-                    <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 tracking-tight">
+                <motion.section
+                    className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mb-24"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={staggerContainer}
+                >
+                    <motion.h1
+                        className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 tracking-tight"
+                        variants={fadeInUp}
+                    >
                         Strategic Leadership for Complex Software Projects
-                    </h1>
-                    <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">
+                    </motion.h1>
+                    <motion.p
+                        className="text-xl text-gray-500 font-medium max-w-2xl mx-auto"
+                        variants={fadeInUp}
+                    >
                         I provide end-to-end project management, business analysis, and solution design services for software development initiatives — helping organizations turn complex ideas into scalable digital solutions.
-                    </p>
-                </section>
+                    </motion.p>
+                </motion.section>
 
                 {/* Services List */}
                 <section className="px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto mb-32">
@@ -222,10 +239,26 @@ export const ServicesPage = () => {
                 {/* Process Section */}
                 <section className="py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
-                        <div className="text-center mb-16">
-                            <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">How We Work</span>
-                            <h2 className="text-4xl font-semibold text-gray-900 mt-4">A Structured Path to Success</h2>
-                        </div>
+                        <motion.div
+                            className="text-center mb-16"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={staggerContainer}
+                        >
+                            <motion.span
+                                className="text-sm font-bold text-blue-600 uppercase tracking-widest"
+                                variants={fadeInUp}
+                            >
+                                How We Work
+                            </motion.span>
+                            <motion.h2
+                                className="text-4xl font-semibold text-gray-900 mt-4"
+                                variants={fadeInUp}
+                            >
+                                A Structured Path to Success
+                            </motion.h2>
+                        </motion.div>
 
                         {/* Steps row */}
                         <div className="flex items-start justify-between">
@@ -253,14 +286,21 @@ export const ServicesPage = () => {
                             ].map((step, i, arr) => (
                                 <React.Fragment key={i}>
                                     {/* Step */}
-                                    <div className="flex flex-col items-start w-44">
+                                    <motion.div
+                                        className="flex flex-col items-start w-44"
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.3 }}
+                                        variants={fadeInUp}
+                                        transition={{ delay: i * 0.15 }}
+                                    >
                                         {/* Icon circle */}
                                         <div className="w-14 h-14 rounded-full  flex items-center justify-center bg-white mb-5">
                                             <step.icon className="text-gray-800" size={20} strokeWidth={1.5} />
                                         </div>
                                         <h3 className="text-base font-semibold text-gray-900 mb-2">{step.title}</h3>
                                         <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
-                                    </div>
+                                    </motion.div>
 
                                     {/* Connector arrow — between steps only */}
                                     {i < arr.length - 1 && (
@@ -278,29 +318,41 @@ export const ServicesPage = () => {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-32 px-4 sm:px-6 lg:px-8 text-center">
+                <motion.section
+                    className="py-32 px-4 sm:px-6 lg:px-8 text-center"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={staggerContainer}
+                >
                     <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-5xl md:text-6xl font-semibold text-gray-900 leading-tight">
+                        <motion.h2
+                            className="text-5xl md:text-6xl font-semibold text-gray-900 leading-tight"
+                            variants={fadeInUp}
+                        >
                             Let's Build Something That Scales.
-                        </h2>
-                        <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                        </motion.h2>
+                        <motion.p
+                            className="text-xl text-gray-500 max-w-2xl mx-auto"
+                            variants={fadeInUp}
+                        >
                             Strategic leadership. Clear execution. Measurable results.
-                        </p>
-                        <div className="pt-8">
+                        </motion.p>
+                        <motion.div className="pt-8" variants={fadeInUp}>
                             <motion.a
-                            href="https://cal.com/lahiru-sandeepa-43gdzg" // Your scheduling link
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
-                            animate={buttonPulse}
-                            whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
-                            whileTap={{ scale: 0.95 }}
+                                href="https://cal.com/lahiru-sandeepa-43gdzg"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
+                                animate={buttonPulse}
+                                whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
+                                whileTap={{ scale: 0.95 }}
                             >
-                            Schedule a Call
+                                Schedule a Call
                             </motion.a>
-                        </div>
+                        </motion.div>
                     </div>
-                </section>
+                </motion.section>
             </div>
         </MainLayout>
     );
