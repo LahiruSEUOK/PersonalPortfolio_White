@@ -10,6 +10,8 @@ import {
     RefreshCw,
     ArrowRight
 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { buttonPulse } from '../hooks/useAnimations';
 
 const ProcessStep = ({ number, title, description, keyActivities, deliverables, duration, isLast }: any) => (
     <div>
@@ -327,9 +329,17 @@ export const ProcessPage = () => {
                             Let's discuss your goals and build a structured plan for success.
                         </p>
                         <div className="pt-8">
-                            <button className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-colors">
+                            <motion.a
+                                href="https://cal.com/lahiru-sandeepa-43gdzg" // Your scheduling link
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#2B7BE9] hover:bg-blue-700 text-white font-semibold py-2 px-8 rounded-full inline-flex items-center gap-2 transition-colors shadow-lg"
+                                animate={buttonPulse}
+                                whileHover={{ scale: 1.08, boxShadow: '0 10px 30px rgba(43, 123, 233, 0.4)' }}
+                                whileTap={{ scale: 0.95 }}
+                                >
                                 Schedule a Call
-                            </button>
+                                </motion.a>
                         </div>
                     </div>
                 </section>

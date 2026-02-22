@@ -47,8 +47,7 @@ export const Footer = () => {
                   </Link>
                 </li>
               ))}
-              <li><Link to="#" className="hover:text-blue-600 transition-colors">Privacy Policy</Link></li>
-              <li><Link to="#" className="hover:text-blue-600 transition-colors">Terms of Service</Link></li>
+          
             </ul>
           </div>
 
